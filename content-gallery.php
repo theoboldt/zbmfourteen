@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying posts in the Image post format
+ * The template for displaying posts in the Gallery post format
  *
  * @package WordPress
  * @subpackage Twenty_Fourteen
@@ -28,7 +28,7 @@
 
 		<div class="entry-meta">
 			<span class="post-format">
-				<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'image' ) ); ?>"><?php echo get_post_format_string( 'image' ); ?></a>
+				<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'gallery' ) ); ?>"><?php echo get_post_format_string( 'gallery' ); ?></a>
 			</span>
 
 			<?php twentyfourteen_posted_on(); ?>

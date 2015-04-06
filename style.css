@@ -522,7 +522,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #b7cffe;
 }
 input,
 button,
@@ -552,7 +552,11 @@ figure {
 img {
   vertical-align: middle;
 }
-.img-responsive {
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+#content .format-gallery .gallery a > img,
+#content .format-gallery .gallery a a > img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -563,7 +567,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857143;
-  background-color: #ffffff;
+  background-color: #93ce90;
   border: 1px solid #dddddd;
   border-radius: 4px;
   -moz-transition: all 0.2s ease-in-out;
@@ -2390,7 +2394,36 @@ a.label:focus {
 /*
 @import "badges.less";
 @import "jumbotron.less";
-@import "thumbnails.less";
+*/
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #93ce90;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -moz-transition: border 0.2s ease-in-out;
+  -ms-transition: border 0.2s ease-in-out;
+  -webkit-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+}
+.thumbnail > img,
+.thumbnail a > img {
+  margin-left: auto;
+  margin-right: auto;
+}
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: #006a21;
+}
+.thumbnail .caption {
+  padding: 9px;
+  color: #333333;
+}
+/*
 @import "alerts.less";
 @import "progress-bars.less";
 @import "media.less";
@@ -2427,7 +2460,48 @@ body {
 .clear {
   clear: both;
 }
+/* sticky header */
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0;
+  background: #0b8d3b;
+  border-bottom: 5px solid #006f23;
+  -moz-box-shadow: 0 -5px 22px 10px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 -5px 22px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 -5px 22px 10px rgba(0, 0, 0, 0.4);
+}
+.sticky .menu-hauptmenue-container {
+  max-width: 992px;
+  padding: 0 15px;
+  margin: 0 auto -5px auto;
+}
+.sticky .menu-hauptmenue-container ul {
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
 /*header */
+h1.site-title {
+  padding-left: 130px;
+  background-image: url("images/logo.png");
+  background-repeat: no-repeat;
+  background-position: left 8px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  h1.site-title {
+    background-image: url("images/logo_2x.png");
+    background-size: 111 56;
+  }
+}
 #site-title-description {
   margin: 20px 0;
   width: 100%;
@@ -2528,7 +2602,6 @@ nav .nav-menu ul li > ul {
   #primary-navigation {
     background: #0b8d3b;
     min-height: 29px;
-    border-bottom: 5px solid #006f23;
   }
   #primary-navigation .menu-toggle span {
     text-indent: 100%;
@@ -2593,18 +2666,6 @@ nav .nav-menu ul li > ul {
   }
 }
 /* General layout */
-.sticky {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  top: 0;
-  z-index: 100;
-  border-top: 0;
-}
-.sticky .menu-hauptmenue-container {
-  max-width: 992px;
-  margin: auto;
-}
 .page,
 #page {
   padding: 0 5px;
@@ -2732,6 +2793,57 @@ nav .nav-menu ul li > ul {
   display: block;
   max-width: 100%;
   height: auto;
+}
+#content .has-post-thumbnail .post-thumbnail {
+  display: block;
+}
+#content .format-gallery .gallery {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+#content .format-gallery .gallery:before,
+#content .format-gallery .gallery:after {
+  content: " ";
+  display: table;
+}
+#content .format-gallery .gallery:after {
+  clear: both;
+}
+#content .format-gallery .gallery figure {
+  position: relative;
+  float: left;
+  width: 25%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#content .format-gallery .gallery a {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #93ce90;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -moz-transition: border 0.2s ease-in-out;
+  -ms-transition: border 0.2s ease-in-out;
+  -webkit-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+}
+#content .format-gallery .gallery a > img,
+#content .format-gallery .gallery a a > img {
+  margin-left: auto;
+  margin-right: auto;
+}
+a#content .format-gallery .gallery a:hover,
+a#content .format-gallery .gallery a:focus,
+a#content .format-gallery .gallery a.active {
+  border-color: #006a21;
+}
+#content .format-gallery .gallery a .caption {
+  padding: 9px;
+  color: #333333;
 }
 #content .post-navigation {
   background-color: #007425;
@@ -2985,15 +3097,16 @@ fieldset[disabled] #content form.comment-form p.form-submit input.active {
   border-color: #0b8d3b;
 }
 /* footer */
-footer #footer-wrapper {
+footer #footer-column {
   position: relative;
   float: left;
   width: 100%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  color: #fef4f0;
 }
-footer #footer-wrapper #supplementary {
+footer #footer-column #footer-wrapper {
   -moz-box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.4);
   box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.4);
@@ -3001,21 +3114,19 @@ footer #footer-wrapper #supplementary {
   border-top: 5px solid #561c00;
   margin-bottom: 10px;
 }
-footer #footer-wrapper #footer-sidebar {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-footer #footer-wrapper #footer-sidebar aside {
-  position: relative;
-  float: left;
-  width: 50%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-footer #footer-wrapper #footer-sidebar .google-maps-widget h1 {
+footer #footer-column #footer-sidebar h1 {
   display: none;
 }
-footer #footer-wrapper #footer-sidebar .google-maps-widget p {
+footer #footer-column #footer-sidebar p {
+  margin-bottom: 2px;
+}
+footer #footer-column #footer-sidebar aside {
+  float: left;
+  margin: 10px;
+}
+footer #footer-column #footer-sidebar .google-maps-widget h1 {
+  display: none;
+}
+footer #footer-column #footer-sidebar .google-maps-widget p {
   margin: 0;
 }
