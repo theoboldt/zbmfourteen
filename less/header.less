@@ -1,5 +1,45 @@
+/* sticky header */
+.sticky {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	border-top: 0;
+	background: @green-default;
+	border-bottom: 5px solid @green-dark-dark;
+
+	.box-shadow(0 -5px 22px 10px rgba(0, 0, 0, 0.4));
+
+	.menu-hauptmenue-container {
+		max-width: 992px;
+		padding: 0 15px;
+		margin: 0 auto -5px auto;
+		ul {
+		-webkit-animation-name: bounceIn;
+		animation-name: bounceIn;
+		-webkit-animation-duration: .75s;
+		animation-duration: .75s;
+		-webkit-animation-duration: 1s;
+		animation-duration: 1s;
+		-webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+
+		}
+	}
+
+}
+
+
 
 /*header */
+h1.site-title {
+	padding-left: 130px;
+	.img-retina('images/logo.png', 'images/logo_2x.png', 111, 56);
+	background-repeat: no-repeat;
+	background-position: left 8px;
+}
+
 #site-title-description {
 	margin: 20px 0;
 	width:100%;
@@ -121,7 +161,7 @@ header .header-main {
 	#primary-navigation {
 		background: @green-default;
 		min-height:29px;
-		border-bottom: 5px solid @green-dark-dark;
+//		border-bottom: 5px solid @green-dark-dark;
 	}
 	#primary-navigation .menu-toggle span {
 		text-indent: 100%;
