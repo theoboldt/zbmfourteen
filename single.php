@@ -39,7 +39,7 @@ get_header(); ?>
                                 previous_post_link( '%link', __( '<span class="meta-nav">Published In</span>%title', 'twentyfourteen' ) );
                             else :
                                 echo '<div class="prev">';
-                                previous_post_link( '%link', '<span class="meta-nav">&laquo;</span> %title' );
+                                    previous_post_link( '%link', '<span class="meta-nav">&laquo;</span> %title' );
                                 echo '</div>';
                                 echo '<div class="next">';
                                 next_post_link( '%link', '%title <span class="meta-nav">&raquo;</span>' );

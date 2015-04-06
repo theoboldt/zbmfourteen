@@ -22,6 +22,17 @@
 	margin-bottom: 10px;
 }
 
+#content article.attachment .attachment {
+	background: #b2b2b2 url('images/pattern-light.svg') repeat fixed;
+	width: 100%;
+
+	img {
+		max-width: 100%;
+		margin: auto;
+	}
+}
+
+#content article.attachment,
 .archive #content article,
 #content article.page,
 #content article.post,
@@ -71,34 +82,6 @@
 		}
 	}
 
-	.post-navigation {
-		background-color: lighten(@green-dark-dark, 1%);
-		color: lighten(@green-light-lightest, 10%);
-		padding: 5px 20px;
-
-		h1 {
-			display: none;
-		}
-
-		a:link {
-			color: lighten(@green-light-lightest, 15%);
-		}
-		a:visited {
-			color: lighten(@green-light-lightest, 20%);
-		}
-		a:hover {
-			color: lighten(@green-light-lightest, 70%);
-		}
-
-		div.prev {
-			float:left;
-		}
-		div.next {
-			float:right;
-		}
-
-	}
-
 	.entry-meta {
 		margin-bottom: 5px;
 		.cat-links {
@@ -112,7 +95,36 @@
 	}
 }
 
+#content #image-navigation,
+#content .post-navigation {
+	background-color: lighten(@green-dark-dark, 1%);
+	color: lighten(@green-light-lightest, 10%);
+	padding: 5px 20px;
 
+	h1 {
+		display: none;
+	}
+
+	a:link {
+		color: lighten(@green-light-lightest, 15%);
+	}
+	a:visited {
+		color: lighten(@green-light-lightest, 20%);
+	}
+	a:hover {
+		color: lighten(@green-light-lightest, 70%);
+	}
+
+	div.previous-image,
+	div.prev {
+		float:left;
+	}
+	div.next-image,
+	div.next {
+		float:right;
+	}
+
+}
 
 #main {
 	h1,h2,h3,h4,h5,h6 {
