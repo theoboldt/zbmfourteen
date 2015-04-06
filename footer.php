@@ -13,8 +13,10 @@
 		</div><!-- #main -->
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
-            <div id="footer-wrapper">
-			    <?php get_sidebar( 'footer' ); ?>
+            <div id="footer-column">
+				<div id="footer-wrapper">
+			    	<?php get_sidebar( 'footer' ); ?>
+				</div>
             </div>
 		</footer><!-- #colophon -->
 	</div><!-- #page -->
@@ -27,7 +29,7 @@
         var stickyNav = function(){
             var scrollTop = jQuery(window).scrollTop();
 
-            if (scrollTopx > stickyNavTop) {
+            if (scrollTop > stickyNavTop) {
                 jQuery('#primary-navigation').addClass('sticky');
             } else {
                 jQuery('#primary-navigation').removeClass('sticky');
