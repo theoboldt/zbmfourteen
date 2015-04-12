@@ -22,26 +22,5 @@
 	</div><!-- #page -->
 
 	<?php wp_footer(); ?>
-<script type="text/javascript">
-    jQuery(document).ready(function() {
-        var stickyNavTop = jQuery('#primary-navigation').offset().top;
-
-        var stickyNav = function(){
-            var scrollTop = jQuery(window).scrollTop();
-
-            if (scrollTop > stickyNavTop) {
-                jQuery('#primary-navigation').addClass('sticky');
-            } else {
-                jQuery('#primary-navigation').removeClass('sticky');
-            }
-        };
-
-        stickyNav();
-
-        jQuery(window).scroll(function() {
-            stickyNav();
-        });
-    });
-</script>
 </body>
 </html>
