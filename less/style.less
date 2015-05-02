@@ -1,0 +1,84 @@
+/*
+Theme Name: ZBM Twenty Fourteen
+Theme URI: http://wordpress.org/themes/twentyfourteen
+Author: Erik Theoboldt
+Author URI: http://wordpress.org/
+Description: In 2014, our default theme lets you create a responsive magazine website with a sleek, modern design. Feature your favorite homepage content in either a grid or a slider. Use the three widget areas to customize your website, and change your content's layout with a full-width page template and a contributor page to show off your authors. Creating a magazine website with WordPress has never been easier.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
+Text Domain: twentyfourteen
+Template: twentyfourteen
+
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+@green-dark-darkest: #00510f;
+@green-dark-dark: #006f23;
+@green-default: #0b8d3b;
+
+@green-light-lighter: #53ad5c;
+@green-light-lightest: #93ce90;
+
+@blue-light: #b7cffe;
+
+// brown http://paletton.com/#uid=10i0u0kllll7UvWeCqDs3g2DlaK
+@brown-dark-darkest: #561C00;
+@brown-dark-default: #7f3410;
+@brown-default: #a95d39;
+@brown-light-light: #d39273;
+@brown-light-lightest: #fcd3bf;
+
+// https://css-tricks.com/snippets/css/useful-css3-less-mixins/
+.opacity (@opacity: 0.5) {
+	-webkit-opacity: 	@opacity;
+	-moz-opacity: 		@opacity;
+	opacity: 		@opacity;
+}
+
+.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
+	-webkit-animation: @name @duration @delay @ease;
+	-moz-animation:    @name @duration @delay @ease;
+	-ms-animation:     @name @duration @delay @ease;
+}
+
+.transition (@transition) {
+	-webkit-transition: @transition;
+	-moz-transition:    @transition;
+	-ms-transition:     @transition;
+	-o-transition:      @transition;
+}
+
+.drop-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+	-webkit-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:		@x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+.box-shadow (@string) {
+	-webkit-box-shadow: @string;
+	-moz-box-shadow:    @string;
+	box-shadow:         @string;
+}
+
+.box-shadow-card {
+	.box-shadow(1px 1px 10px 2px rgba(0, 0, 0, 0.4));
+}
+.box-shadow-card-small {
+	.box-shadow(1px 1px 6px 1px rgba(0, 0, 0, 0.3));
+}
+@import "reset";
+@import "bootstrap/bootstrap";
+@import "general";
+@import "header";
+@import "layout";
+
+@import "content-main";
+@import "content-sidebar";
+
+@import "content-form";
+
+@import "footer";

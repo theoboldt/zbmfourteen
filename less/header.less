@@ -1,0 +1,192 @@
+
+/*header */
+#site-title-description {
+	margin: 20px 0;
+	width:100%;
+}
+
+#site-title-description h1,
+#site-title-description h2 {
+	display: inline;
+	font-size: 26px;
+	line-height: 30px;
+}
+#site-title-description h2 {
+	color: @green-dark-dark;
+	margin-left:7px;
+}
+
+.site-title a,
+#primary-navigation ul,
+nav .nav-menu ul {
+	font-family: 'Montserrat', sans-serif;
+}
+
+#search-container, .search-toggle, .skip-link {
+	display: none;
+}
+
+#primary-navigation ul,
+nav .nav-menu ul {
+	width:100%;
+	display: table;
+	table-layout: fixed;
+	margin: 0;
+}
+
+
+#primary-navigation ul li,
+nav .nav-menu ul li {
+	display: table-cell;
+	list-style-type: none;
+}
+#primary-navigation ul li a {
+	text-align: center;
+	display: block;
+	padding: 5px;
+	color: white;
+	background: @green-default;
+	border-bottom: 5px solid @green-dark-dark;
+}
+
+#primary-navigation ul li.current-menu-item a {
+	text-align: center;
+	display: block;
+	padding: 5px;
+	color: white;
+	background: @green-dark-dark;
+	border-bottom: 5px solid @green-dark-darkest;
+}
+
+
+#primary-navigation ul li a:active,
+#primary-navigation ul li a:hover {
+	/* For Safari 3.1 to 6.0 */
+	-webkit-transition-property: background, border-bottom, color;
+	-webkit-transition-duration: 0.1s;
+	-webkit-transition-timing-function: linear;
+	/* Standard syntax */
+	transition-property: background, border-bottom, color;
+	transition-duration: 0.1s;
+	transition-timing-function: linear;
+
+	border-bottom: 5px solid @green-light-lighter;
+	background: @green-light-lightest;
+	color: @green-dark-darkest;
+}
+
+#primary-navigation ul li > ul,
+nav .nav-menu ul li > ul {
+	display: none;
+}
+
+header .header-main {
+
+	@media (max-width: 768px) {
+
+	}
+
+	@media (min-width:475px) {
+		.box-shadow-card;
+		margin-bottom: 10px;
+	}
+}
+
+
+#site-header {
+	.flex-control-nav {
+		bottom: 15px !important;
+	}
+	.flexslider {
+		margin:0;
+	}
+
+	border-bottom: 5px solid @green-dark-dark;
+}
+
+
+#comments textarea {
+	width: 300px;
+}
+
+@media (max-width: 475px) {
+	#main {
+		display: block;
+	}
+
+	#main > div {
+		display: block;
+	}
+
+	#primary-navigation {
+		background: @green-default;
+		min-height:29px;
+		border-bottom: 5px solid @green-dark-dark;
+	}
+	#primary-navigation .menu-toggle span {
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	#primary-navigation .menu-toggle span:before {
+		content: "";
+		position: absolute;
+		top: 0.6em;
+		left: 0;
+		width: 1em;
+		height: 0.125em;
+		border-top: 0.375em double #fff;
+		border-bottom: 0.125em solid #fff;
+	}
+
+	#primary-navigation .menu-toggle {
+		padding-left: 1.25em;
+		position: relative;
+
+		height:29px;
+		float: right;
+		display: block;
+		color: white;
+		background: @green-default;
+		border:0;
+	}
+
+	#primary-navigation ul li a {
+		border-left: 5px solid transparent;
+	}
+	#primary-navigation ul li a:active,
+	#primary-navigation ul li a:hover {
+		border-left-color: @green-dark-darkest;
+		background: @green-light-lightest;
+		color: @green-dark-darkest;
+
+	}
+
+	#primary-navigation .menu-hauptmenue-container {
+		.transition(all .2s ease-in-out);
+		display: none;
+	}
+
+	#primary-navigation.toggled-on .menu-hauptmenue-container {
+		display: block;
+	}
+
+	#primary-navigation.toggled-on ul li,
+	nav .nav-menu ul li {
+		display: block;
+		list-style-type: none;
+	}
+	#primary-navigation.toggled-on ul li a {
+		text-align: left;
+		display: block;
+		background: @green-default;
+		border-bottom: 0;
+	}
+
+	#primary-navigation.toggled-on ul li a:active,
+	#primary-navigation.toggled-on ul li a:hover {
+		background: @green-light-lightest;
+		color: @green-dark-darkest;
+	}
+
+}

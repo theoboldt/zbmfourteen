@@ -1,0 +1,114 @@
+/* main */
+
+
+#content header.archive-header {
+	.box-shadow-card;
+	border-top: 5px solid darken(@green-dark-dark, 5%);
+	background-color: @green-dark-dark;
+	color: lighten(@green-light-lightest, 20%);
+	margin-bottom: 10px;
+	h1 {
+		padding: 0;
+		margin: 10px 20px;
+	}
+}
+.archive #content article,
+#content article.page,
+#content div.post-with-nav,
+#comments {
+	.box-shadow-card;
+	background-color: @green-light-lightest;
+	border-top: 5px solid @green-dark-dark;
+	margin-bottom: 10px;
+}
+
+.archive #content article,
+#content article.page,
+#content article.post,
+#comments {
+	padding: 20px;
+
+	header {
+		h1 {
+			font-size: 30px;
+			color: @green-dark-darkest;
+			margin: 0;
+			padding-bottom: 5px;
+			display: inline-block;
+		}
+	}
+}
+
+
+#content {
+	.post-thumbnail {
+		padding: 0;
+		background: #b2b2b2 url('images/pattern-light.svg') repeat fixed;
+		margin: -20px -20px 10px -20px;
+
+		img.wp-post-image {
+			margin:auto;
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	.post-navigation {
+		background-color: lighten(@green-dark-dark, 1%);
+		color: lighten(@green-light-lightest, 10%);
+		padding: 5px 20px;
+
+		h1 {
+			display: none;
+		}
+
+		a:link {
+			color: lighten(@green-light-lightest, 15%);
+		}
+		a:visited {
+			color: lighten(@green-light-lightest, 20%);
+		}
+		a:hover {
+			color: lighten(@green-light-lightest, 70%);
+		}
+
+		div.prev {
+			float:left;
+		}
+		div.next {
+			float:right;
+		}
+
+	}
+
+	.entry-meta {
+		margin-bottom: 5px;
+		.cat-links {
+			visibility: hidden;
+			a {
+				visibility: visible;
+				.label;
+				.label-primary;
+			}
+		}
+	}
+}
+
+
+
+#main {
+	h1,h2,h3,h4,h5,h6 {
+		padding-top: 0;
+		display: inline-block;
+	}
+	h2 {
+		color: lighten(@green-dark-darkest, 5%);
+	}
+	h3 {
+		color: lighten(@green-dark-darkest, 7%);
+	}
+	h4 {
+		color: lighten(@green-dark-darkest, 11%);
+	}
+}

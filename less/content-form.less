@@ -1,0 +1,30 @@
+#content form.comment-form {
+	input,
+	textarea {
+		.form-control;
+	}
+	textarea {
+		min-height: 80px;
+	}
+
+	p.comment-form-author,
+	p.comment-form-email,
+	p.comment-form-url,
+	p.comment-form-comment {
+		.form-group;
+	}
+
+	p.form-submit {
+		input {
+			.btn-primary;
+		}
+
+		input:hover {
+			background-color: lighten(@green-default, 20%);
+			color: darken(@green-dark-darkest, 50%);
+			border-color: @green-default;
+		}
+	}
+
+
+}
