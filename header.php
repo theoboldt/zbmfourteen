@@ -29,55 +29,82 @@
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
-    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+	<link href='http://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>
+	<link href="<?php echo get_stylesheet_directory_uri(); ?>/bootstrap.min.css" rel="stylesheet" />
     <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-
 	<header id="masthead" class="site-header" role="banner">
-        <div id="site-title-description" class="col-xs-12">
-            <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-            <?php
-            $description = get_bloginfo( 'description', 'display' );
-            if ( ! empty ( $description ) ) :
-                ?>
-                <h2 class="site-description"><?php echo esc_html( $description ); ?></h2>
-            <?php endif; ?>
-        </div>
-        <div class="col-xs-12">
-            <div class="header-main">
-                <div class="search-toggle">
-                    <a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'twentyfourteen' ); ?></a>
-                </div>
 
-                <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
-                    <button class="menu-toggle" title="<?php _e( 'Primary Menu', 'twentyfourteen' ); ?>"><span>Menü</span></button>
-                    <a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
-                    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-                </nav>
+		<div class="">
+		<div class="container" style="">
+				<div class="shadow">
+					<div class="logo">
+					<div id="site-title-description">
+<!--
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+-->
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Zeltlager Zimmerbergmühle</a></h1>
+						<?php
+						$description = get_bloginfo( 'description', 'display' );
+						if ( ! empty ( $description ) ) :
+							?>
+							<h2 class="site-description"><?php echo esc_html( $description ); ?></h2>
+						<?php endif; ?>
+					</div>
 
-            <div id="search-container" class="search-box-wrapper hide">
-                <div class="search-box">
-                    <?php get_search_form(); ?>
-                </div>
-            </div>
-            <?php if ( get_header_image() ) : ?>
-                <div id="site-header">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                        <?php
-                        echo do_shortcode("[metaslider id=62]");
-                        /*
-                        <img src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-                        */
-                        ?>
-                    </a>
-                </div>
-            <?php endif; ?>
-            </div>
-        </div>
+					<div class="header-main">
+						<!--
+						<div class="search-toggle">
+							<a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'twentyfourteen' ); ?></a>
+						</div>
+						-->
+						<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+							<button class="menu-toggle" title="<?php _e( 'Primary Menu', 'twentyfourteen' ); ?>"><span>Menü</span></button>
+							<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
+							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+						</nav>
+<!--
+					<div id="search-container" class="search-box-wrapper hide">
+						<div class="search-box">
+							<?php get_search_form(); ?>
+						</div>
+					</div>
+-->
+					</div>
+
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<div class="container-fluid">
+			<section class="block">
+				<div id="header-carousel" class="carousel slide">
+					<div class="carousel-inner">
+						<div class="active item">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide_1_full.jpg" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+						</div>
+						<div class="item">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide_5_full.jpg" alt="Slide2" />
+						</div>
+						<div class="item">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide_3_full.jpg" alt="Slide2" />
+						</div>
+						<div class="item">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide_4_full.jpg" alt="Slide3" />
+						</div>
+					</div>
+					<a class="carousel-control left" href="#header-carousel" data-slide="prev">‹</a>
+					<a class="carousel-control right" href="#header-carousel" data-slide="next">›</a>
+				</div>
+			</section>
+		</div>
+
 
     </header><!-- #masthead -->
 
-	<div id="main" class="site-main">
+	<div id="main" class="site-main container">

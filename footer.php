@@ -21,6 +21,30 @@
 		</footer><!-- #colophon -->
 	</div><!-- #page -->
 
+	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/bootstrap.min.js"></script>
 	<?php wp_footer(); ?>
+<!--	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>-->
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        var stickyNavTop = jQuery('#primary-navigation').offset().top;
+
+        var stickyNav = function(){
+            var scrollTop = jQuery(window).scrollTop();
+
+            if (scrollTop > stickyNavTop) {
+                jQuery('#primary-navigation').addClass('sticky');
+            } else {
+                jQuery('#primary-navigation').removeClass('sticky');
+            }
+        };
+
+        stickyNav();
+
+        jQuery(window).scroll(function() {
+            stickyNav();
+        });
+    });
+</script>
 </body>
 </html>
