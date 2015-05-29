@@ -1,6 +1,9 @@
 /* sticky header */
 
+@import "carousel-fade";
+
 #header-carousel {
+	background-color: black;
 	z-index: 10;
 }
 
@@ -44,18 +47,18 @@ header .container-fluid {
 
 		height: 50px;
 		position: absolute;
-		top:20px;
 		left: 0;
 		right: 0;
 		margin: 0 auto;
 		width: 970px;
 
 		@media (min-width: 1200px) {
-			width:1170px;
+			width:1110px;
 		}
 
 
 		@media (max-width: 768px) {
+			top:10px;
 			width: 750px;
 		}
 
@@ -63,22 +66,35 @@ header .container-fluid {
 			color: #fff;
 		}
 		.shadow {
-			 background-image: url("images/header_box_bg.png");
-			 background-size: 100%;
-			 background-repeat: no-repeat;
+			padding-top: 8px;
+			margin-top: 12px;
+			//background-image: url("images/header_box_bg.png");
+			background-size: 100%;
+			background-repeat: no-repeat;
 
 			min-height: 150px;
 
-			 @media (max-width: 992px) {
-				 background-position-y: 25px;
-			 }
-			 @media (max-width: 1000px) {
-				 background-position-y: 27px;
-			 }
+			@media
+			only screen and (-webkit-min-device-pixel-ratio: 2),
+			only screen and (   min--moz-device-pixel-ratio: 2),
+			only screen and (     -o-min-device-pixel-ratio: 2/1),
+			only screen and (        min-device-pixel-ratio: 2),
+			only screen and (                min-resolution: 192dpi),
+			only screen and (                min-resolution: 2dppx) {
+				margin-top: -15px;
+				padding-top: 0;
+			}
+
+			@media (max-width: 992px) {
+				background-position-y: 25px;
+			}
+			@media (max-width: 1000px) {
+				background-position-y: 27px;
+			}
 		}
 
 		 .logo {
-			 .img-retina('images/logo.png', 'images/logo_2x.png', 200px, 100px);
+			 .img-retina('images/logo.png', 'images/logo_2x.png', 175px, 93px);
 			 background-repeat: no-repeat;
 			 background-position: left 8px;
 			 min-height: 110px;
@@ -92,30 +108,31 @@ header .container-fluid {
 
 
 #site-title-description, header .header-main {
-	margin-left: 215px;
+	margin-left: 190px;
 }
 
 
 #site-title-description {
 	height: 61px;
-	background-image: url("images/line.png");
+	.img-retina('images/line.png', 'images/line_2x.png', 99px, 5px);
 	background-repeat: repeat-x;
 	background-position-y: 55px;
+	margin-right: 5px;
 
 	h1, h2 {
 		padding: 0;
 		margin-top: 12px;
 		color: #fff;
-//        text-shadow: 0 0 2px #c8c8c8, 0 0 4px #c8c8c8;
+        text-shadow: 0 0 20px #0f0f0f;
 		line-height: 40px;
-		font-family: 'Cabin Sketch', sans-serif;
+		font-family: @acent-font;
 		float: left;
 	}
 
 	@media (max-width: 1000px) {
 		h1, h2 {
 			margin-top: 20px;
-			font-size: 21px !important;
+			font-size: 22px !important;
 		}
 	}
 
@@ -138,6 +155,8 @@ header .container-fluid {
 }
 
 #primary-navigation {
+	font-family: @acent-font;
+
 	.screen-reader-text.skip-link {
 		display: none;
 	}
@@ -165,6 +184,8 @@ header .container-fluid {
 			padding-left: 6px;
 */
 			a {
+				color: #fff;
+		        text-shadow: 0 0 20px #0f0f0f;
 				/*
 				display: block;
 				background-image: url('images/header_link_bg_right.png');
@@ -174,14 +195,13 @@ header .container-fluid {
 				padding-right: 6px;
 				line-height: 30px;
 				*/
-				color: #fff;
 			}
 			a:hover, a:active {
 				//font-weight: bold;
 
 			}
 		}
-
+/*
 		.page-item-19 a {
 //			color: #aa273e;
 			color: #f7b7c4;
@@ -201,6 +221,7 @@ header .container-fluid {
 //			color: #4700a2;
 			color: #ffe4ab;
 		}
+*/
 	}
 
 

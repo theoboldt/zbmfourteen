@@ -79,10 +79,10 @@
 			</section>
 
 			<section class="header-slider">
-				<div id="header-carousel" class="carousel slide">
+				<div id="header-carousel" class="carousel slide carousel-fade">
 					<div class="carousel-inner">
 						<div class="active item">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide_1_full.jpg" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide_4_full.jpg" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
 						</div>
 						<div class="item">
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide_5_full.jpg" alt="Slide2" />
@@ -91,7 +91,7 @@
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide_3_full.jpg" alt="Slide2" />
 						</div>
 						<div class="item">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide_4_full.jpg" alt="Slide3" />
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide_1_full.jpg" alt="Slide3" />
 						</div>
 					</div>
 					<a class="carousel-control left" href="#header-carousel" data-slide="prev">‹</a>
