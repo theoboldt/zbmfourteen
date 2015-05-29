@@ -22,9 +22,9 @@
 		</footer><!-- #colophon -->
 	</div><!-- #page -->
 
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/bootstrap.min.js"></script>
+	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/carousel.js"></script>
+	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/transition.js"></script>
 	<?php wp_footer(); ?>
-<!--	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>-->
 
 <script type="text/javascript">
     jQuery(document).ready(function() {
