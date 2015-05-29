@@ -2484,12 +2484,11 @@ body {
 }
 #header-carousel {
   background-color: black;
-  z-index: 10;
 }
 .carousel .item {
   width: 100%;
   /*slider width*/
-  max-height: 600px;
+  max-height: 500px;
   /*slider height*/
 }
 .carousel .item img {

@@ -30,7 +30,7 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
 
-	<link href='http://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Boogaloo' rel='stylesheet' type='text/css'>
 	<link href="<?php echo get_stylesheet_directory_uri(); ?>/bootstrap.min.css" rel="stylesheet" />
     <?php wp_head(); ?>
 </head>
