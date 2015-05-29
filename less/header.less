@@ -18,50 +18,81 @@
     top: 50%;
 }
 /*full width container*/
-.block {
+
+.header-slider {
     margin-left: -20px;
     margin-right: -20px;
 }
 
-header .container {
-	z-index: 20;
-	position: relative;
-//	margin: auto;
-//	margin-top: -100px;
+header#masthead:after {
+	z-index: 15;
+	width: 100%;
+	height: 10px;
+	margin-top: -7px;
+	position: absolute;
+	background-image: url("images/frame_top.png");
+	background-repeat: repeat-x;
+	content: '';
+	display: table;
 
-	 .row {
-		 @media (max-width: @screen-lg-min) {
-			 background-position-y: 20px;
-		 }
-		 @media (max-width: 1000px) {
-			 background-position-y: 27px;
-		 }
-	 }
+}
+
+header .container-fluid {
+
+	.header-text {
+		z-index: 20;
+
+		height: 50px;
+		position: absolute;
+		top:20px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		width: 970px;
+
+		@media (min-width: 1200px) {
+			width:1170px;
+		}
 
 
-    .row {
-		 background-image: url("images/header_box_bg.png");
-		 background-size: 100%;
-		 background-repeat: no-repeat;
+		@media (max-width: 768px) {
+			width: 750px;
+		}
 
-		 > div {
+		a, a:visited {
+			color: #fff;
+		}
+		.shadow {
+			 background-image: url("images/header_box_bg.png");
+			 background-size: 100%;
+			 background-repeat: no-repeat;
+
+			min-height: 150px;
+
+			 @media (max-width: 992px) {
+				 background-position-y: 25px;
+			 }
+			 @media (max-width: 1000px) {
+				 background-position-y: 27px;
+			 }
+		}
+
+		 .logo {
 			 .img-retina('images/logo.png', 'images/logo_2x.png', 200px, 100px);
 			 background-repeat: no-repeat;
 			 background-position: left 8px;
 			 min-height: 110px;
 		 }
-    }
+
+
+	}
+
 
 }
 
-header .container > div {
-	z-index: 30;
-	margin-top: 15px;
-
-}
 
 #site-title-description, header .header-main {
-	margin-left: 195px;
+	margin-left: 215px;
 }
 
 
@@ -151,22 +182,22 @@ header .container > div {
 			}
 		}
 
-		#menu-item-102 a {
+		.page-item-19 a {
 //			color: #aa273e;
 			color: #f7b7c4;
 		}
 
-		#menu-item-103 a {
+		.page-item-105 a {
 //			color: #47a841;
 			color: #bbffbb;
 		}
 
-		#menu-item-104 a {
+		.page-item-14 a {
 //			color: #013e6a;
 			color: #a8d7ff;
 		}
 
-		#menu-item-107 a {
+		.page-item-16 a {
 //			color: #4700a2;
 			color: #ffe4ab;
 		}

@@ -39,50 +39,46 @@
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
 
-		<div class="">
-		<div class="container" style="">
+		<div class="container-fluid">
+			<section class="header-text">
 				<div class="shadow">
 					<div class="logo">
-					<div id="site-title-description">
+						<div id="site-title-description">
 <!--
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 -->
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Zeltlager Zimmerbergmühle</a></h1>
-						<?php
-						$description = get_bloginfo( 'description', 'display' );
-						if ( ! empty ( $description ) ) :
-							?>
-							<h2 class="site-description"><?php echo esc_html( $description ); ?></h2>
-						<?php endif; ?>
-					</div>
-
-					<div class="header-main">
-						<!--
-						<div class="search-toggle">
-							<a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'twentyfourteen' ); ?></a>
+							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Zeltlager Zimmerbergmühle</a></h1>
+							<?php
+							$description = get_bloginfo( 'description', 'display' );
+							if ( ! empty ( $description ) ) :
+								?>
+								<h2 class="site-description"><?php echo esc_html( $description ); ?></h2>
+							<?php endif; ?>
 						</div>
-						-->
-						<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
-							<button class="menu-toggle" title="<?php _e( 'Primary Menu', 'twentyfourteen' ); ?>"><span>Menü</span></button>
-							<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
-							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-						</nav>
+						<div class="header-main">
+							<!--
+							<div class="search-toggle">
+								<a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'twentyfourteen' ); ?></a>
+							</div>
+							-->
+							<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+								<button class="menu-toggle" title="<?php _e( 'Primary Menu', 'twentyfourteen' ); ?>"><span>Menü</span></button>
+								<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
+								<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+							</nav>
 <!--
-					<div id="search-container" class="search-box-wrapper hide">
-						<div class="search-box">
-							<?php get_search_form(); ?>
+						<div id="search-container" class="search-box-wrapper hide">
+							<div class="search-box">
+								<?php get_search_form(); ?>
+							</div>
+						</div>
+-->
 						</div>
 					</div>
--->
-					</div>
-
 				</div>
-			</div>
-		</div>
-		</div>
+			</section>
 
-		<div class="container-fluid">
-			<section class="block">
+			<section class="header-slider">
 				<div id="header-carousel" class="carousel slide">
 					<div class="carousel-inner">
 						<div class="active item">
@@ -103,7 +99,6 @@
 				</div>
 			</section>
 		</div>
-
 
     </header><!-- #masthead -->
 

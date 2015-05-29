@@ -2442,7 +2442,7 @@ a.thumbnail.active {
 @import "responsive-utilities.less";
 */
 body {
-  background-color: #ffffff;
+  background-color: #ede4d7;
 }
 ::selection {
   background: #000;
@@ -2479,48 +2479,76 @@ body {
   top: 50%;
 }
 /*full width container*/
-.block {
+.header-slider {
   margin-left: -20px;
   margin-right: -20px;
 }
-header .container {
+header#masthead:after {
+  z-index: 15;
+  width: 100%;
+  height: 10px;
+  margin-top: -7px;
+  position: absolute;
+  background-image: url("images/frame_top.png");
+  background-repeat: repeat-x;
+  content: '';
+  display: table;
+}
+header .container-fluid .header-text {
   z-index: 20;
-  position: relative;
+  height: 50px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 970px;
 }
-@media (max-width: 1200px) {
-  header .container .row {
-    background-position-y: 20px;
+@media (min-width: 1200px) {
+  header .container-fluid .header-text {
+    width: 1170px;
   }
 }
-@media (max-width: 1000px) {
-  header .container .row {
-    background-position-y: 27px;
+@media (max-width: 768px) {
+  header .container-fluid .header-text {
+    width: 750px;
   }
 }
-header .container .row {
+header .container-fluid .header-text a,
+header .container-fluid .header-text a:visited {
+  color: #fff;
+}
+header .container-fluid .header-text .shadow {
   background-image: url("images/header_box_bg.png");
   background-size: 100%;
   background-repeat: no-repeat;
+  min-height: 150px;
 }
-header .container .row > div {
+@media (max-width: 992px) {
+  header .container-fluid .header-text .shadow {
+    background-position-y: 25px;
+  }
+}
+@media (max-width: 1000px) {
+  header .container-fluid .header-text .shadow {
+    background-position-y: 27px;
+  }
+}
+header .container-fluid .header-text .logo {
   background-image: url("images/logo.png");
   background-repeat: no-repeat;
   background-position: left 8px;
   min-height: 110px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  header .container .row > div {
+  header .container-fluid .header-text .logo {
     background-image: url("images/logo_2x.png");
     background-size: 200px 100px;
   }
 }
-header .container > div {
-  z-index: 30;
-  margin-top: 15px;
-}
 #site-title-description,
 header .header-main {
-  margin-left: 195px;
+  margin-left: 215px;
 }
 #site-title-description {
   height: 61px;
@@ -2592,16 +2620,16 @@ header .header-main {
 				*/
   color: #fff;
 }
-#primary-navigation ul #menu-item-102 a {
+#primary-navigation ul .page-item-19 a {
   color: #f7b7c4;
 }
-#primary-navigation ul #menu-item-103 a {
+#primary-navigation ul .page-item-105 a {
   color: #bbffbb;
 }
-#primary-navigation ul #menu-item-104 a {
+#primary-navigation ul .page-item-14 a {
   color: #a8d7ff;
 }
-#primary-navigation ul #menu-item-107 a {
+#primary-navigation ul .page-item-16 a {
   color: #ffe4ab;
 }
 /* General layout */
