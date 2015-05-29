@@ -2630,58 +2630,36 @@ header .header-main {
 }
 #primary-navigation ul {
   margin: 0;
-  /*
-		.page-item-19 a {
-//			color: #aa273e;
-			color: #f7b7c4;
-		}
-
-		.page-item-105 a {
-//			color: #47a841;
-			color: #bbffbb;
-		}
-
-		.page-item-14 a {
-//			color: #013e6a;
-			color: #a8d7ff;
-		}
-
-		.page-item-16 a {
-//			color: #4700a2;
-			color: #ffe4ab;
-		}
-*/
 }
-#primary-navigation ul .current_page_item a {
+#primary-navigation ul .current_page_item a,
+#primary-navigation ul .current-menu-item a {
   font-weight: bold;
+  text-decoration: underline;
 }
 #primary-navigation ul li {
   list-style-type: none;
   float: left;
-  margin-right: 10px;
+  margin-right: 15px;
   font-size: 20px;
   height: 30px;
   line-height: 30px;
   text-align: center;
-  /*
-			background-image: url('images/header_link_bg_left.png');
-			background-repeat: no-repeat;
-			background-position: left 50%;
-			padding-left: 6px;
-*/
 }
 #primary-navigation ul li a {
   color: #fff;
   text-shadow: 0 0 20px #0f0f0f;
-  /*
-				display: block;
-				background-image: url('images/header_link_bg_right.png');
-				background-position: right 50%;
-				background-repeat: no-repeat;
-				height: 30px;
-				padding-right: 6px;
-				line-height: 30px;
-				*/
+}
+#primary-navigation ul .menu-item-no-0 a {
+  color: #f7b7c4;
+}
+#primary-navigation ul .menu-item-no-1 a {
+  color: #bbffbb;
+}
+#primary-navigation ul .menu-item-no-2 a {
+  color: #a8d7ff;
+}
+#primary-navigation ul .menu-item-no-3 a {
+  color: #ffe4ab;
 }
 /* General layout */
 /*
@@ -2701,15 +2679,30 @@ body .page, body #page  {
 code {
   display: none;
 }
-#main-content {
+#main {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+#primary {
   position: relative;
   float: left;
-  width: 100%;
+  width: 66.66666667%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#secondary {
+  position: relative;
+  float: left;
+  width: 33.33333333%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 /* sidebar */
+#primary-sidebar h1 {
+  padding-bottom: 0;
+}
 #content form.comment-form input,
 #content form.comment-form textarea {
   display: block;

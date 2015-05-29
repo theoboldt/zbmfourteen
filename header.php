@@ -64,7 +64,10 @@
 							<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
 								<button class="menu-toggle" title="<?php _e( 'Primary Menu', 'twentyfourteen' ); ?>"><span>Menü</span></button>
 								<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
-								<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+								<?php
+								require_once __DIR__.'/inc/walker.php';
+								wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'walker' => new zbmfourteen_walker_nav_menu() ) );
+								?>
 							</nav>
 <!--
 						<div id="search-container" class="search-box-wrapper hide">
@@ -102,4 +105,5 @@
 
     </header><!-- #masthead -->
 
-	<div id="main" class="site-main container">
+	<div class="container">
+		<div id="main" class="site-main">
