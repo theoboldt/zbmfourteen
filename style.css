@@ -2259,6 +2259,10 @@ header .container-fluid .header-text {
   margin: 0 auto;
   width: auto;
 }
+header .container-fluid .header-text a:hover {
+  color: #ffecc4;
+  text-decoration: none;
+}
 header .container-fluid .header-text a,
 header .container-fluid .header-text a:visited {
   color: #fff;
@@ -2267,6 +2271,18 @@ header .container-fluid .header-text .shadow {
   background-size: 100%;
   background-repeat: no-repeat;
   min-height: 175px;
+  /*
+			@media
+			only screen and (-webkit-min-device-pixel-ratio: 2),
+			only screen and (   min--moz-device-pixel-ratio: 2),
+			only screen and (     -o-min-device-pixel-ratio: 2/1),
+			only screen and (        min-device-pixel-ratio: 2),
+			only screen and (                min-resolution: 192dpi),
+			only screen and (                min-resolution: 2dppx) {
+//				margin-top: -15px;
+//				padding-top: 0;
+			}
+*/
 }
 header .container-fluid .header-text .logo {
   background-image: url("images/logo.png");
@@ -2347,10 +2363,11 @@ header .header-main {
 .header-main .menu-item-no-3 a {
   color: #ffecc4;
 }
-@media (max-width: 700px) {
+@media (max-width: 1700px) {
   .header-main #primary-navigation .menu-toggle {
+    z-index: 100;
     border: 0;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     display: block;
@@ -2374,21 +2391,21 @@ header .header-main {
   }
   .header-main #primary-navigation .menu-toggle span {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 17px;
-    left: 5px;
     right: 5px;
     height: 5px;
     background: #333;
+    width: 30px;
     -webkit-transition: background 0 0.3s;
     transition: background 0 0.3s;
   }
   .header-main #primary-navigation .menu-toggle span:before,
   .header-main #primary-navigation .menu-toggle span:after {
-    position: absolute;
+    position: fixed;
     display: block;
-    left: 0;
-    width: 100%;
+    right: 5px;
+    width: 30px;
     height: 5px;
     background-color: #333;
     content: "";
@@ -2398,14 +2415,14 @@ header .header-main {
     transition-delay: 0.3s, 0;
   }
   .header-main #primary-navigation .menu-toggle span:before {
-    top: -10px;
+    top: 7px;
     -webkit-transition-property: top, -webkit-transform;
     transition-property: top, transform;
   }
   .header-main #primary-navigation .menu-toggle span:after {
-    bottom: -10px;
-    -webkit-transition-property: bottom, -webkit-transform;
-    transition-property: bottom, transform;
+    top: 27px;
+    -webkit-transition-property: top, -webkit-transform;
+    transition-property: top, transform;
   }
   .header-main #primary-navigation .menu-toggle:focus {
     outline: none;
@@ -2416,26 +2433,51 @@ header .header-main {
   .header-main #primary-navigation.toggled-on .menu-toggle {
     background-color: #aa273e;
   }
+  .header-main #primary-navigation.toggled-on .menu-toggle:hover {
+    background-color: #d0344f;
+  }
   .header-main #primary-navigation.toggled-on .menu-toggle span {
     background: none;
   }
   .header-main #primary-navigation.toggled-on .menu-toggle span::before {
-    top: 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
   .header-main #primary-navigation.toggled-on .menu-toggle span::after {
-    bottom: 0;
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
   .header-main #primary-navigation.toggled-on .menu-toggle span::before,
   .header-main #primary-navigation.toggled-on .menu-toggle span::after {
+    top: 18px;
     background-color: #fff;
     -webkit-transition-delay: 0, 0.3s;
     transition-delay: 0, 0.3s;
+  }
+  .header-main #primary-navigation.toggled-on ul {
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: block;
+    width: 100%;
+  }
+  .header-main #primary-navigation.toggled-on ul li {
+    float: none;
+    margin: 0;
+    height: 40px;
+    line-height: 40px;
+  }
+  .header-main #primary-navigation.toggled-on ul li a {
+    display: block;
+    height: 40px;
+    background-color: #333;
+    border-bottom: 1px solid #404040;
+    text-shadow: none;
+  }
+  .header-main #primary-navigation.toggled-on ul li a:hover {
+    background-color: #404040;
   }
 }
 .header-main #primary-navigation {

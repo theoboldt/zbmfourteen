@@ -52,6 +52,11 @@ header .container-fluid {
 		margin: 0 auto;
 		width: auto;
 
+		a:hover {
+			color: @color-ac-3-light;
+			text-decoration: none;
+		}
+
 		a, a:visited {
 			color: #fff;
 		}
@@ -63,7 +68,7 @@ header .container-fluid {
 			background-repeat: no-repeat;
 
 			min-height: 175px;
-
+/*
 			@media
 			only screen and (-webkit-min-device-pixel-ratio: 2),
 			only screen and (   min--moz-device-pixel-ratio: 2),
@@ -74,6 +79,7 @@ header .container-fluid {
 //				margin-top: -15px;
 //				padding-top: 0;
 			}
+*/
 		}
 
 		 .logo {
@@ -160,11 +166,12 @@ header .container-fluid {
 	}
 
 	/* #### burger required */
-	@media (max-width: 700px) {
+	@media (max-width: 1700px) {
 		#primary-navigation {
 			.menu-toggle {
+				z-index: 100;
 				border: 0;
-				position: absolute;
+				position: fixed;
 				top: 0;
 				right: 0;
 				display: block;
@@ -188,12 +195,12 @@ header .container-fluid {
 
 				span {
 					display: block;
-					position: absolute;
+					position: fixed;
 					top: 17px;
-					left: 5px;
 					right: 5px;
 					height: 5px;
 					background: #333;
+					width: 30px;
 
 					-webkit-transition: background 0 0.3s;
 					transition: background 0 0.3s;
@@ -201,10 +208,10 @@ header .container-fluid {
 
 				span:before,
 				span:after {
-					position: absolute;
+					position: fixed;
 					display: block;
-					left: 0;
-					width: 100%;
+					right: 5px;
+					width: 30px;
 					height: 5px;
 					background-color: #333;
 					content: "";
@@ -216,16 +223,16 @@ header .container-fluid {
 				}
 
 				span:before {
-					top: -10px;
+					top: 7px;
 
 					-webkit-transition-property: top, -webkit-transform;
 					transition-property: top, transform;
 				}
 				span:after {
-					bottom: -10px;
+					top: 27px;
 
-					-webkit-transition-property: bottom, -webkit-transform;
-					transition-property: bottom, transform;
+					-webkit-transition-property: top, -webkit-transform;
+					transition-property: top, transform;
 				}
 
 			}
@@ -239,8 +246,12 @@ header .container-fluid {
 		}
 
 		#primary-navigation.toggled-on {
+		//#primary-navigation {
 			.menu-toggle {
 				background-color: @color-ac-0;
+			}
+			.menu-toggle:hover {
+				background-color: lighten(@color-ac-0, 10%);
 			}
 
 			.menu-toggle span {
@@ -248,14 +259,12 @@ header .container-fluid {
 			}
 
 			.menu-toggle span::before {
-				top: 0;
 				-webkit-transform: rotate(45deg);
 				-ms-transform: rotate(45deg);
 				  transform: rotate(45deg);
 			}
 
 			.menu-toggle span::after {
-				bottom: 0;
 				-webkit-transform: rotate(-45deg);
 				-ms-transform: rotate(-45deg);
 				transform: rotate(-45deg);
@@ -263,13 +272,36 @@ header .container-fluid {
 
 			.menu-toggle span::before,
 			.menu-toggle span::after {
+				top: 18px;
 				background-color: #fff;
 				-webkit-transition-delay: 0, 0.3s;
 				transition-delay: 0, 0.3s;
 			}
 
 			ul {
+				top: 0;
+				left: 0;
+				position: fixed;
+				display: block;
+				width: 100%;
 
+				li {
+					float: none;
+					margin: 0;
+					height: 40px;
+					line-height: 40px;
+
+					a {
+						display: block;
+						height: 40px;
+						background-color: #333;
+						border-bottom: 1px solid lighten(#333, 5%);
+						text-shadow: none;
+					}
+					a:hover {
+						background-color: lighten(#333, 5%);
+					}
+				}
 			}
 		}
 	} //end of media which requires burger
