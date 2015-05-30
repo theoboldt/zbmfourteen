@@ -2532,6 +2532,23 @@ body .page, body #page  {
   width: 100%;
 }
 /*primary/sidebar*/
+.widget h1 {
+  padding-bottom: 2px;
+}
+.widget ul {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0;
+}
+.widget a:link {
+  color: #4d4d4d;
+}
+.widget a:visited {
+  color: #4f4f4f;
+}
+.widget a:hover {
+  color: #1a1a1a;
+}
 /* main */
 code {
   display: none;
@@ -2542,7 +2559,7 @@ code {
 }
 #primary {
   float: left;
-  width: 66.66666667%;
+  width: 100%;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -2560,7 +2577,7 @@ code {
     width: 75%;
   }
 }
-#secondary {
+#secondary aside {
   float: left;
   width: 33.33333333%;
   position: relative;
@@ -2569,13 +2586,13 @@ code {
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  #secondary {
+  #secondary aside {
     float: left;
     width: 33.33333333%;
   }
 }
 @media (min-width: 992px) {
-  #secondary {
+  #secondary aside {
     float: left;
     width: 25%;
   }
@@ -2586,23 +2603,6 @@ Extra small devices Phones (<768px)	Small devices Tablets (≥768px)	Medium devi
 .col-xs-	.col-sm-	.col-md-	.col-lg-
 */
 /* sidebar */
-#primary-sidebar h1 {
-  padding-bottom: 2px;
-}
-#primary-sidebar ul {
-  list-style-type: none;
-  display: inline-block;
-  margin: 0;
-}
-#primary-sidebar a:link {
-  color: #4d4d4d;
-}
-#primary-sidebar a:visited {
-  color: #4f4f4f;
-}
-#primary-sidebar a:hover {
-  color: #1a1a1a;
-}
 #content form.comment-form textarea {
   min-height: 80px;
 }
@@ -2671,4 +2671,49 @@ fieldset[disabled] #content form.comment-form p.form-submit input.active {
 #content form.comment-form p.form-submit input .badge {
   color: #4d4d4d;
   background-color: #ffffff;
+}
+footer#colophon:before {
+  z-index: 15;
+  width: 100%;
+  height: 30px;
+  margin-top: -15px;
+  position: absolute;
+  background-image: url("images/frame_bottom.png");
+  background-repeat: repeat-x;
+  overflow: hidden;
+  content: '';
+  display: table;
+}
+footer#colophon {
+  background-color: #333;
+  color: #d9d9d9;
+  padding-bottom: 10px;
+}
+footer#colophon h1 {
+  color: #e0e0e0;
+  font-size: 22px;
+}
+footer#colophon p {
+  margin-bottom: 3px;
+}
+footer#colophon #footer-wrapper {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+footer#colophon #footer-wrapper aside {
+  position: relative;
+  float: left;
+  width: 25%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+footer#colophon a:link {
+  color: #e0e0e0;
+}
+footer#colophon a:visited {
+  color: #dedede;
+}
+footer#colophon a:hover {
+  color: #fff;
 }
