@@ -42,6 +42,15 @@ header#masthead:after {
 
 header .container-fluid {
 
+	a:hover {
+		color: @color-ac-3-light;
+		text-decoration: none;
+	}
+
+	a, a:visited {
+		color: #fff;
+	}
+
 	.header-text {
 		z-index: 20;
 
@@ -52,14 +61,6 @@ header .container-fluid {
 		margin: 0 auto;
 		width: auto;
 
-		a:hover {
-			color: @color-ac-3-light;
-			text-decoration: none;
-		}
-
-		a, a:visited {
-			color: #fff;
-		}
 		.shadow {
 //			padding-top: 8px;
 //			margin-top: 12px;
@@ -147,26 +148,48 @@ header .container-fluid {
 	display: none;
 }
 
-.header-main {
+header .header-main {
+	a {
+		text-shadow: 0 0 20px #0f0f0f;
+	}
+	a:hover, a:active {
+		//font-weight: bold;
+	}
+
 	.menu-item-no-0 a {
 		color: @color-ac-0-light;
 	}
+	.menu-item-no-0 a:hover {
+		color: lighten(@color-ac-0-light, 10%);
+	}
+
 
 	.menu-item-no-1 a {
 		color: @color-ac-1-light;
 	}
+	.menu-item-no-1 a:hover {
+		color: lighten(@color-ac-1-light, 10%);
+	}
+
 
 	.menu-item-no-2 a {
 		color: @color-ac-2-light;
 	}
+	.menu-item-no-2 a:hover {
+		color: lighten(@color-ac-2-light, 10%);
+	}
+
 
 	.menu-item-no-3 a {
 		color: @color-ac-3-light;
 
 	}
+	.menu-item-no-3 a:hover {
+		color: lighten(@color-ac-3-light, 10%);
+	}
 
 	/* #### burger required */
-	@media (max-width: 1700px) {
+	@media (max-width: 700px) {
 		#primary-navigation {
 			.menu-toggle {
 				z-index: 100;
@@ -246,7 +269,6 @@ header .container-fluid {
 		}
 
 		#primary-navigation.toggled-on {
-		//#primary-navigation {
 			.menu-toggle {
 				background-color: @color-ac-0;
 			}
@@ -327,15 +349,6 @@ header .container-fluid {
 				height: 30px;
 				line-height: 30px;
 				text-align: center;
-
-				a {
-					color: #fff;
-					text-shadow: 0 0 20px #0f0f0f;
-				}
-				a:hover, a:active {
-					//font-weight: bold;
-
-				}
 			}
 
 
