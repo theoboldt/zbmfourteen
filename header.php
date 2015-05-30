@@ -44,16 +44,9 @@
 				<div class="shadow">
 					<div class="logo">
 						<div id="site-title-description">
-<!--
-							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
--->
-							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Zeltlager Zimmerbergmühle</a></h1>
-							<?php
-							$description = get_bloginfo( 'description', 'display' );
-							if ( ! empty ( $description ) ) :
-								?>
-								<h2 class="site-description"><?php echo esc_html( $description ); ?></h2>
-							<?php endif; ?>
+							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Zeltlager Zimmerbergmühle Abschnitt 2</a></h1>
+							<div class="site-title-m"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Zeltlager ZBM Abschnitt 2</a></div>
+							<div class="site-title-s"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">ZBM A2</a></div>
 						</div>
 						<div class="header-main">
 							<!--
