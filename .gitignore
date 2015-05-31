@@ -1,3 +1,4 @@
 style.less
 less/bootstrap/*.css
 .idea/*
+bootstrap/*
