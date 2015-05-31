@@ -38,11 +38,13 @@
 <div id="page" class="hfeed site<?php
 
 $categories	= get_the_category();
-if (is_array($categories) && count($categories) == 1) {
+if (is_array($categories) && count($categories) && !is_month()) {
 	$slug	= $categories[0]->slug;
 
 	if (strpos($slug, 'tagesberichte') !== false) {
 		echo ' site-tagesberichte';
+	} elseif (strpos($slug, 'umgebung') !== false) {
+		echo ' site-umgebung';
 	} else {
 		echo ' site-'.htmlspecialchars($slug);
 	}

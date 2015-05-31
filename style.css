@@ -3954,7 +3954,10 @@ body {
   margin-left: -20px;
   margin-right: -20px;
 }
-header#masthead:after {
+#masthead {
+  overflow: hidden;
+}
+#masthead:after {
   z-index: 15;
   width: 100%;
   height: 10px;
@@ -3964,6 +3967,13 @@ header#masthead:after {
   background-repeat: repeat-x;
   content: '';
   display: table;
+  margin-bottom: 20px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  #masthead:after {
+    background-image: url("images/frame_top_2x.png");
+    background-size: 100px 25px;
+  }
 }
 header .container-fluid a:hover {
   color: #ffecc4;
@@ -4599,7 +4609,14 @@ footer#colophon:before {
   content: '';
   display: table;
 }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  footer#colophon:before {
+    background-image: url("images/frame_bottom_2x.png");
+    background-size: 100px 25px;
+  }
+}
 footer#colophon {
+  overflow: hidden;
   margin-top: 20px;
   background-color: #333;
   color: #d9d9d9;
@@ -4608,6 +4625,11 @@ footer#colophon {
 footer#colophon h1 {
   color: #e0e0e0;
   font-size: 22px;
+}
+@media (max-width: 560px) {
+  footer#colophon h1 {
+    font-size: 18px;
+  }
 }
 footer#colophon p {
   margin-bottom: 3px;

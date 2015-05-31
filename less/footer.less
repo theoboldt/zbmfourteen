@@ -4,7 +4,7 @@ footer#colophon:before {
 	height: 30px;
 	margin-top: -15px;
 	position: absolute;
-	background-image: url("images/frame_bottom.png");
+	.img-retina('images/frame_bottom.png', 'images/frame_bottom_2x.png', 100px, 25px);
 	background-repeat: repeat-x;
 	overflow: hidden;
 	content: '';
@@ -12,6 +12,7 @@ footer#colophon:before {
 }
 
 footer#colophon {
+	overflow: hidden;
 	margin-top: 20px;
 
 	background-color: #333;
@@ -21,10 +22,14 @@ footer#colophon {
 	h1 {
 		color: darken(#fff, 12%);
 		font-size: 22px;
+
+		@media (max-width: 560px) {
+            font-size: 18px;
+		}
 	}
 
 	p {
-		margin-bottom: 3px;
+		margin-bottom: 4px;
 	}
 
 	#footer-wrapper {
