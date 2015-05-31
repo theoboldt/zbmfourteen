@@ -35,7 +35,14 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
+<div id="page" class="hfeed site<?php
+
+$categories	= get_the_category();
+if (is_array($categories) && count($categories)) {
+	$slug	= $categories[0]->slug;
+	echo ' site-'.htmlspecialchars($slug);
+}
+?>">
 	<header id="masthead" class="site-header" role="banner">
 
 		<div class="container-fluid">
