@@ -111,5 +111,6 @@ if (is_array($categories) && count($categories) && !is_month()) {
 
     </header><!-- #masthead -->
 
-	<div class="container">
-		<div id="main" class="site-main">
+	<div class="containercontainer">
+		<div class="container">
+			<div id="main" class="site-main">

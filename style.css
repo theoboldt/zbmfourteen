@@ -3890,7 +3890,7 @@ a.thumbnail.active {
   }
 }
 body {
-  background-color: #ede4d7;
+  background-color: #333;
 }
 ::selection {
   background: #302929;
@@ -4267,6 +4267,10 @@ body .page, body #page  {
   width: 100%;
 }
 /*primary/sidebar*/
+#page .containercontainer {
+  background-color: #ede4d7;
+  padding-bottom: 20px;
+}
 .widget h1 {
   padding-bottom: 2px;
 }
@@ -4291,7 +4295,7 @@ body .page, body #page  {
   background-color: #333;
   background-repeat: no-repeat;
   margin: 0 -40px;
-  height: 100px;
+  height: 98px;
   max-width: 600px;
 }
 .page #content .entry-header h1,
@@ -4634,7 +4638,6 @@ footer#colophon:before {
 }
 footer#colophon {
   overflow: hidden;
-  margin-top: 20px;
   background-color: #333;
   color: #d9d9d9;
   padding-bottom: 10px;
