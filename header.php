@@ -31,7 +31,6 @@
 	<![endif]-->
 
 	<link href='http://fonts.googleapis.com/css?family=Boogaloo' rel='stylesheet' type='text/css'>
-	<link href="<?php echo get_stylesheet_directory_uri(); ?>/bootstrap.min.css" rel="stylesheet" />
     <?php wp_head(); ?>
 </head>
 
@@ -41,7 +40,7 @@
 
 		<div class="container-fluid">
 			<section class="header-text">
-				<div class="shadow">
+				<div class="shadow glyphicon glyphicon-adjust">
 					<div class="logo">
 						<div id="site-title-description">
 							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Zeltlager Zimmerbergmühle Abschnitt 2</a></h1>
