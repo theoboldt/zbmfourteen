@@ -4666,6 +4666,9 @@ footer#colophon #footer-wrapper aside {
   padding-left: 15px;
   padding-right: 15px;
 }
+footer#colophon #footer-sidebar aside:first-child {
+  padding-right: 0;
+}
 footer#colophon a:link {
   color: #e0e0e0;
 }
