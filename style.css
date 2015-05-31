@@ -4002,7 +4002,12 @@ header .container-fluid .header-text {
   left: 0;
   right: 0;
   margin: 0 auto;
-  width: 970px;
+  width: 1170px;
+}
+@media (max-width: 1200px) {
+  header .container-fluid .header-text {
+    width: 970px;
+  }
 }
 @media (max-width: 992px) {
   header .container-fluid .header-text {
