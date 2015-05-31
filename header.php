@@ -47,7 +47,7 @@ if (is_array($categories) && count($categories)) {
 
 		<div class="container-fluid">
 			<section class="header-text">
-				<div class="shadow glyphicon glyphicon-adjust">
+				<div class="shadow">
 					<div class="logo">
 						<div id="site-title-description">
 							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Zeltlager Zimmerbergmühle Abschnitt 2</a></h1>
