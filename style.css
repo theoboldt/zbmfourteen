@@ -3906,6 +3906,16 @@ body {
 .clear {
   clear: both;
 }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    letter-spacing: -1px;
+  }
+}
 /* sticky header */
 .carousel-fade .carousel-inner .item {
   opacity: 0;
@@ -4632,7 +4642,7 @@ footer#colophon h1 {
   }
 }
 footer#colophon p {
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 footer#colophon #footer-wrapper {
   margin-left: -15px;
