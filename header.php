@@ -38,7 +38,7 @@
 <div id="page" class="hfeed site<?php
 
 $categories	= get_the_category();
-if (is_array($categories) && count($categories)) {
+if (is_array($categories) && count($categories) == 1) {
 	$slug	= $categories[0]->slug;
 
 	if (strpos($slug, 'tagesberichte') !== false) {
