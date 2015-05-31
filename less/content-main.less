@@ -1,10 +1,5 @@
 /* main */
 
-code {
-	display: none;
-}
-
-
 #main {
 	.make-row();
 }
@@ -13,10 +8,6 @@ code {
 	.make-xs-column(12);
 	.make-sm-column(8);
 	.make-md-column(9);
-
-	.cat-links {
-
-	}
 }
 
 #secondary aside {
@@ -31,6 +22,13 @@ code {
 	}
 }
 
+.cat-links {
+	.glyphicon {
+		color: #262626;
+	}
+}
+
+
 #content {
 
 	h1 {
@@ -38,11 +36,23 @@ code {
 	}
 
 	article {
-		margin-bottom: 10px;
+		margin-bottom: 40px;
 
 		h1 {
 			font-size: 25px;
 			padding: 0;
+			margin-bottom: 2px;
+		}
+
+		.entry-meta:first-child {
+			margin: 0;
+		}
+		.entry-meta {
+			margin-bottom: 4px;
+
+			> span {
+				padding-right: 8px;
+			}
 		}
 	}
 }
@@ -50,6 +60,10 @@ code {
 
 /* home page */
 #primary.home article {
+
+	h1 {
+		padding: 20px 0 12px;
+	}
 
 	.cards:after {
 	    content: "";

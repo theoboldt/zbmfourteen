@@ -40,7 +40,12 @@
 $categories	= get_the_category();
 if (is_array($categories) && count($categories)) {
 	$slug	= $categories[0]->slug;
-	echo ' site-'.htmlspecialchars($slug);
+
+	if (strpos($slug, 'tagesberichte') !== false) {
+		echo ' site-tagesberichte';
+	} else {
+		echo ' site-'.htmlspecialchars($slug);
+	}
 }
 ?>">
 	<header id="masthead" class="site-header" role="banner">
