@@ -4299,6 +4299,12 @@ body .page, body #page  {
 #primary.home #content .entry-header {
   background-color: #aa273e;
 }
+#primary.home #content .entry-header h2 {
+  color: #25090e;
+  padding: 0;
+  margin-top: -18px;
+  margin-left: 140px;
+}
 body .site-umgebung #content .archive-header {
   background-color: #47a841;
 }
