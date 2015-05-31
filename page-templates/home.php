@@ -26,13 +26,16 @@ get_header(); ?>
 			?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<header class="entry-header"><h1 class="entry-title">Herzlich Willkommen in der ZBM Abschnitt 2!</h1></header><!-- .entry-header -->
+				<header class="entry-header">
+					<h1 class="entry-title">Herzlich Willkommen</h1>
+					<h2>in der ZBM Abschnitt 2!</h2>
+				</header><!-- .entry-header -->
 
 				<p>Der zweite Abschnitt fasst mittlerweile ebenso wie der erste Abschnitt bis zu 200 Kinder. Die Kinder werden bereits beim sogenannten Check-In also direkt nach der Ankunft geschlechtlich und nach alter aufgeteilt.</p>
 				<p>Angestrebt werden Zeltgruppen von 8-10 Kindern. Jeder Zeltgruppe wird im Anschluss mindestens ein Betreuer zugeordnet.</p>
 				<p>Ziel des Ganzen ist es Gruppen mit ungefähr gleichen Interessen zu schaffen und ihnen einen festen Betreuer zuzuordnen.</p>
 
-
+<!--
 				<ul class="cards">
 					<li class="card-1 card-ac-0">
 						<div class="flipper">

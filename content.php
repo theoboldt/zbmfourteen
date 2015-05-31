@@ -14,21 +14,20 @@
 	<?php twentyfourteen_post_thumbnail(); ?>
 
 	<header class="entry-header">
-		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && twentyfourteen_categorized_blog() ) : ?>
-		<div class="entry-meta">
-			<span class="cat-links"><span class="glyphicon glyphicon-tags"></span> <?php echo get_the_category_list( ', ' ); ?></span>
-		</div>
-		<?php
-			endif;
-		?>
 		<?php
 			if ( is_single() ) :
 				the_title( '<h1 class="entry-title">', '</h1>' );
 			else :
 				the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
 			endif;
+			if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && twentyfourteen_categorized_blog() ) :
 		?>
-
+		<div class="entry-meta">
+			<span class="cat-links"><span class="glyphicon glyphicon-tags"></span> <?php echo get_the_category_list( ', ' ); ?></span>
+		</div>
+		<?php
+			endif;
+		?>
 		<div class="entry-meta">
 			<?php
 				if ( 'post' == get_post_type() )

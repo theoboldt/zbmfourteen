@@ -3977,7 +3977,6 @@ body {
   background-repeat: repeat-x;
   content: '';
   display: table;
-  margin-bottom: 20px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   #masthead:after {
@@ -4281,45 +4280,36 @@ body .page, body #page  {
   color: #1a1a1a;
 }
 /* colors for special pages */
-#primary.home #content h1,
-#primary.home #content h1 a {
-  color: #aa273e;
+.page #content .entry-header,
+.category #content .archive-header {
+  background-image: url('images/strokehole.png');
+  background-color: #333;
+  background-repeat: no-repeat;
+  margin: 0 -40px;
+  height: 100px;
+  max-width: 600px;
 }
-#primary.home .cat-links a,
-#primary.home .cat-links span,
-#primary.home .entry-meta a,
-#primary.home .entry-meta span {
-  color: #952236;
+.page #content .entry-header h1,
+.category #content .archive-header h1 {
+  font-size: 35px;
+  color: #ede4d7;
+  padding-top: 21px;
+  margin: 0 40px;
 }
-.site-umgebung #content h1,
-.site-umgebung #content h1 a {
-  color: #3f963a;
+#primary.home #content .entry-header {
+  background-color: #aa273e;
 }
-.site-umgebung .cat-links a,
-.site-umgebung .cat-links span,
-.site-umgebung .entry-meta a,
-.site-umgebung .entry-meta span {
-  color: #30712c;
+body .site-umgebung #content .archive-header {
+  background-color: #47a841;
 }
-.site-tagesberichte #content h1,
-.site-tagesberichte #content h1 a {
-  color: #0a5487;
+body .site-tagesberichte #content .archive-header {
+  background-color: #0e71b6;
 }
-.site-tagesberichte .cat-links a,
-.site-tagesberichte .cat-links span,
-.site-tagesberichte .entry-meta a,
-.site-tagesberichte .entry-meta span {
-  color: #09456f;
+body .site-aktionen #content .archive-header {
+  background-color: #ffbf4b;
 }
-.site-aktionen #content h1,
-.site-aktionen #content h1 a {
-  color: #916300;
-}
-.site-aktionen .cat-links a,
-.site-aktionen .cat-links span,
-.site-aktionen .entry-meta a,
-.site-aktionen .entry-meta span {
-  color: #785100;
+body .site-aktionen #content .archive-header h1 {
+  color: #333;
 }
 /* main */
 #main {
@@ -4401,6 +4391,13 @@ body .page, body #page  {
 #content .post-with-nav .nav-links .next {
   float: right;
 }
+article .post-thumbnail img {
+  width: 100%;
+  height: auto;
+}
+article .content {
+  background-image: url('images/content_bg.png');
+}
 /* home page */
 #primary.home article h1 {
   padding: 20px 0 12px;
@@ -4466,6 +4463,9 @@ body .page, body #page  {
   height: auto;
 }
 /* sidebar */
+#primary-sidebar {
+  margin-top: 10px;
+}
 #content form.comment-form input,
 #content form.comment-form textarea {
   display: block;
