@@ -4376,6 +4376,15 @@ body .page, body #page  {
 #content article .entry-meta > span {
   padding-right: 8px;
 }
+#content .post-with-nav nav h1.screen-reader-text {
+  display: none;
+}
+#content .post-with-nav .nav-links .prev {
+  float: left;
+}
+#content .post-with-nav .nav-links .next {
+  float: right;
+}
 /* home page */
 #primary.home article h1 {
   padding: 20px 0 12px;
