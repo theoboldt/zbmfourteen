@@ -88,7 +88,7 @@ if (is_array($categories) && count($categories) && !is_month()) {
 			</section>
 
 			<section class="header-slider">
-				<div id="header-carousel" class="carousel slide carousel-fade">
+				<div id="header-carousel" class="carousel slide carousel-fade" data-interval="7000" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="active item">
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide_4_full.jpg" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
