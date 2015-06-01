@@ -191,8 +191,11 @@ header .header-main {
 		color: lighten(@color-ac-3-light, 10%);
 	}
 
+	@color-burger-bg: #f5f5f5;
+	@color-burger-fg: #333;
 	/* #### burger required */
 	@media (max-width: 700px) {
+
 		#primary-navigation {
 			.menu-toggle {
 				z-index: 100;
@@ -201,7 +204,7 @@ header .header-main {
 				top: 0;
 				right: 0;
 				display: block;
-				background-color: #fff;
+				background-color: @color-burger-fg;
 				overflow: hidden;
 				margin: 0;
 				padding: 0;
@@ -225,7 +228,7 @@ header .header-main {
 					top: 17px;
 					right: 5px;
 					height: 5px;
-					background: #333;
+					background: @color-burger-bg;
 					width: 30px;
 
 					-webkit-transition: background 0 0.3s;
@@ -239,7 +242,7 @@ header .header-main {
 					right: 5px;
 					width: 30px;
 					height: 5px;
-					background-color: #333;
+					background-color: @color-burger-bg;
 					content: "";
 
 					-webkit-transition-duration: 0.3s, 0.3s;
@@ -298,7 +301,7 @@ header .header-main {
 			.menu-toggle span::before,
 			.menu-toggle span::after {
 				top: 18px;
-				background-color: #fff;
+				background-color: @color-burger-bg;
 				-webkit-transition-delay: 0, 0.3s;
 				transition-delay: 0, 0.3s;
 			}
