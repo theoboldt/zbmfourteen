@@ -32,11 +32,13 @@ function zbmfourteen_scripts() {
 
 	// Load our main stylesheet.
 	wp_enqueue_style( 'zbmfourteen-font', 'http://fonts.googleapis.com/css?family=Boogaloo' );
-	if (WP_DEBUG) {
+//	if (WP_DEBUG) {
 		wp_enqueue_style( 'zbmfourteen-style', get_stylesheet_uri(), array('zbmfourteen-font') );
+	/*
 	} else {
 		wp_enqueue_style( 'zbmfourteen-style', get_stylesheet_directory_uri().'/style.min.css', array('zbmfourteen-font') );
 	}
+	*/
 
 	if (WP_DEBUG) {
 		wp_enqueue_script( 'zbmfourteen-countdown', get_stylesheet_directory_uri() . '/js/jquery.countdown.min.js', array( 'jquery' ), $version, true );
@@ -63,3 +65,8 @@ function textdomain_jquery_enqueue() {
 if ( !is_admin() ) {
 	add_action( 'wp_enqueue_scripts', 'textdomain_jquery_enqueue', 11 );
 }
+
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
+remove_action( 'admin_print_styles', 'print_emoji_styles' );
