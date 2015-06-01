@@ -134,6 +134,8 @@
 } )( jQuery );
 
 jQuery(document).ready(function() {
+
+	/*	STICKY NAV start */
     var stickyNavTop = jQuery('#primary-navigation').offset().top;
 
     var stickyNav = function(){
@@ -151,4 +153,18 @@ jQuery(document).ready(function() {
     jQuery(window).scroll(function() {
         stickyNav();
     });
+	/*	STICKY NAV end */
+
+	/*	COUNTDOWN start */
+	jQuery("#timer-tostart").countdown("2015/09/16", function(event) {
+		var $this = jQuery(this).html(event.strftime(''
+		+ '<span>%-w</span> week%!w '
+		+ '<span>%-d</span> day%!d '
+		+ '<span>%H</span> hr '
+		+ '<span>%M</span> min '
+		+ '<span>%S</span> sec'));
+	});
+	/*	COUNTDOWN end */
+
 });
+
