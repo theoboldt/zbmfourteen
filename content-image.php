@@ -28,6 +28,7 @@
 
 		<div class="entry-meta">
 			<span class="post-format">
+				<span class="glyphicon glyphicon-picture"></span>
 				<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'image' ) ); ?>"><?php echo get_post_format_string( 'image' ); ?></a>
 			</span>
 

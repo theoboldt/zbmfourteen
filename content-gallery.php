@@ -30,6 +30,7 @@
 
 		<div class="entry-meta">
 			<span class="post-format">
+				<span class="glyphicon glyphicon-th-large"></span>
 				<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'gallery' ) ); ?>"><?php echo get_post_format_string( 'gallery' ); ?></a>
 			</span>
 
