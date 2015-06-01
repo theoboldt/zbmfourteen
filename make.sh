@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+echo "Compiling LESS..."
+lessc less/style.less > style.css
+echo "LESS done."
+
 echo "Compressing CSS..."
 /usr/bin/yui-compressor -o style.min.css style.css
 echo "CSS done."
