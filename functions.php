@@ -3,6 +3,11 @@
 // Custom template tags for this theme.
 require get_stylesheet_directory() . '/inc/template-tags.php';
 
+if ( ! isset( $content_width ) ) {
+	$content_width = 850;
+}
+
+
 /**
  * Enqueue scripts and styles for the front end.
  *
