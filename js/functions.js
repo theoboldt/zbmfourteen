@@ -158,11 +158,10 @@ jQuery(document).ready(function() {
 	/*	COUNTDOWN start */
 	jQuery("#timer-tostart").countdown("2015/09/16", function(event) {
 		var $this = jQuery(this).html(event.strftime(''
-		+ '<span>%-w</span> week%!w '
-		+ '<span>%-d</span> day%!d '
-		+ '<span>%H</span> hr '
-		+ '<span>%M</span> min '
-		+ '<span>%S</span> sec'));
+		+ '<span>%D</span> Tage '
+		+ '<span>%H</span> Std '
+		+ '<span>%M</span> Min '
+		+ '<span>%S</span> Sek '));
 	});
 	/*	COUNTDOWN end */
 
