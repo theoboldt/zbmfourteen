@@ -7,6 +7,14 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 850;
 }
 
+add_filter( 'comments_open', 'filter_media_comment_status', 10 , 2 );
+function filter_media_comment_status( $open, $post_id ) {
+    $post = get_post( $post_id );
+    if( $post->post_type == 'attachment' ) {
+        return false;
+    }
+    return $open;
+}
 
 /**
  * Enqueue scripts and styles for the front end.
@@ -50,6 +58,13 @@ function zbmfourteen_scripts() {
 		wp_enqueue_script( 'zbmfourteen-carousel', get_stylesheet_directory_uri() . '/js/bootstrap/carousel.js', array( 'jquery' ), $version, true );
 		wp_enqueue_script( 'zbmfourteen-transition', get_stylesheet_directory_uri() . '/js/bootstrap/transition.js', array( 'jquery' ), $version, true );
 		wp_enqueue_script( 'zbmfourteen-functions', get_stylesheet_directory_uri() . '/js/functions.js', array( 'jquery', 'zbmfourteen-transition', 'zbmfourteen-carousel' ), $version, true );
+/*
+		//tiled gallery
+		wp_enqueue_script( 'zbmfourteen-gallery-spin', get_stylesheet_directory_uri() . '/js/tiled-gallery/spin.js', array(), $version, true );
+		wp_enqueue_script( 'zbmfourteen-gallery-jqspin', get_stylesheet_directory_uri() . '/js/tiled-gallery/jquery.spin.js', array( 'jquery', 'zbmfourteen-gallery-spin' ), $version, true );
+		wp_enqueue_script( 'zbmfourteen-gallery-carousel', get_stylesheet_directory_uri() . '/js/tiled-gallery/jetpack-carousel.js', array( 'jquery', 'zbmfourteen-gallery-jqspin' ), $version, true );
+		wp_enqueue_script( 'zbmfourteen-gallery-tiled', get_stylesheet_directory_uri() . '/js/tiled-gallery/tiled-gallery.js', array( 'jquery' ), $version, true );
+*/
 	} else {
 		wp_enqueue_script( 'zbmfourteen-all', get_stylesheet_directory_uri() . '/script.min.js', array( 'jquery' ), $version, true );
 	}
@@ -75,3 +90,25 @@ remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
+/**
+ * Remove tiled gallery styles
+*/
+if (WP_DEBUG) {
+	function tweakjp_rm_tiledcss(){
+    	wp_dequeue_style( 'tiled-gallery' );
+	}
+	add_action( 'wp_footer', 'tweakjp_rm_tiledcss' );
+	function changejp_dequeue_styles() {
+    	wp_dequeue_style( 'jetpack-carousel' );
+	}
+	add_action( 'post_gallery', 'changejp_dequeue_styles', 1001 );
+}
+
+
+/*
+			wp_register_script( 'spin', plugins_url( 'spin.js', __FILE__ ), false, '1.3' );
+			wp_register_script( 'jquery.spin', plugins_url( 'jquery.spin.js', __FILE__ ) , array( 'jquery', 'spin' ) );
+
+			wp_enqueue_script( 'jetpack-carousel', plugins_url( 'jetpack-carousel.js', __FILE__ ), array( 'jquery.spin' ), $this->asset_version( '20130109' ), true );
+*/

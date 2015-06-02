@@ -18,6 +18,11 @@ cat "js/bootstrap/transition.js" >> script.min.js.tmp
 
 cat "js/functions.js" >> script.min.js.tmp
 
+#cat "js/tiled-gallery/jquery.spin.js" >> script.min.js.tmp
+#cat "js/tiled-gallery/spin.js" >> script.min.js.tmp
+#cat "js/tiled-gallery/jetpack-carousel.js" >> script.min.js.tmp
+#cat "js/tiled-gallery/tiled-gallery.js" >> script.min.js.tmp
+
 echo "Compressing JS..."
 /usr/bin/yui-compressor --type=js -o script.min.js script.min.js.tmp
 echo "Removing temporary file..."

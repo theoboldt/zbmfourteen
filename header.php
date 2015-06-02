@@ -21,6 +21,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
+	<meta name="google-site-verification" content="NnGqZJVIqfE9DOZcFHXxB2FqRM-8YPf6gUqg8WMUWGk" />
 	<meta http-equiv="Cache-control" content="public">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
