@@ -104,8 +104,8 @@ if (is_array($categories) && count($categories) && !is_month()) {
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slide_1_full.jpg" alt="Slide3" />
 						</div>
 					</div>
-					<a class="carousel-control left" href="#header-carousel" data-slide="prev">‹</a>
-					<a class="carousel-control right" href="#header-carousel" data-slide="next">›</a>
+					<a class="carousel-control left" href="#header-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></a>
+					<a class="carousel-control right" href="#header-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></a>
 				</div>
 			</section>
 		</div>
