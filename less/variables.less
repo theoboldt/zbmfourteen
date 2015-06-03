@@ -1,0 +1,50 @@
+@color-main-bg: #ede4d7;
+@acent-font: 'Boogaloo', sans-serif;
+
+@color-ac-0: #aa273e;
+@color-ac-0-light: lighten(@color-ac-0, 40%);
+@color-ac-0-dark: darken(@color-ac-0, 10%);
+
+@color-ac-1: #47a841;
+@color-ac-1-light: #bbffbb;
+@color-ac-1-dark: darken(@color-ac-1, 22%);
+
+@color-ac-2: #0e71b6;
+@color-ac-2-light: lighten(@color-ac-2, 52%);
+@color-ac-2-dark: darken(@color-ac-2, 2%);
+
+@color-ac-3: #ffe4ab;
+@color-ac-3-light: lighten(@color-ac-3, 5%);
+@color-ac-3-dark: #ffbf4b;
+
+
+// https://css-tricks.com/snippets/css/useful-css3-less-mixins/
+.opacity (@opacity: 0.5) {
+	-webkit-opacity: 	@opacity;
+	-moz-opacity: 		@opacity;
+	opacity: 		@opacity;
+}
+
+.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
+	-webkit-animation: @name @duration @delay @ease;
+	-moz-animation:    @name @duration @delay @ease;
+	-ms-animation:     @name @duration @delay @ease;
+}
+
+.transition (@transition) {
+	-webkit-transition: @transition;
+	-moz-transition:    @transition;
+	-ms-transition:     @transition;
+	-o-transition:      @transition;
+}
+
+.drop-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+	-webkit-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:		@x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+.box-shadow (@string) {
+	-webkit-box-shadow: @string;
+	-moz-box-shadow:    @string;
+	box-shadow:         @string;
+}

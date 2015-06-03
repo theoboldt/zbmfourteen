@@ -112,3 +112,8 @@ if (WP_DEBUG) {
 
 			wp_enqueue_script( 'jetpack-carousel', plugins_url( 'jetpack-carousel.js', __FILE__ ), array( 'jquery.spin' ), $this->asset_version( '20130109' ), true );
 */
+
+function my_login_stylesheet() {
+    wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/style-login.css' );
+}
+add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );

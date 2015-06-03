@@ -1,0 +1,13 @@
+@import "variables";
+@import "bootstrap/mixins/image";
+
+body {
+	background-color: @color-main-bg;
+}
+
+.login h1 a {
+	width: 175px;
+	height: 93px;
+	.img-retina('images/logo.png', 'images/logo_2x.png', 175px, 93px);
+	background-size: 175px;
+}

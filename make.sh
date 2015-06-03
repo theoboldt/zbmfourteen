@@ -2,6 +2,7 @@
 
 echo "Compiling LESS..."
 lessc less/style.less > style.css
+lessc less/style-login.less > style-login.css
 echo "LESS done."
 
 echo "Compressing CSS..."
