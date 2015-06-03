@@ -3,3 +3,58 @@
 #primary-sidebar {
 	  margin-top: 10px;
 }
+
+#timer-tostart {
+	font-size: 10px;
+	span {
+		font-size: 15px;
+	}
+}
+
+#primary-sidebar {
+	aside:before {
+		margin-left: -10px;
+		min-width: 200px;
+		height: 50px;
+		display: block;
+		content: '';
+		background-image: url('images/strokehole_sidebar.png');
+		background-repeat: no-repeat;
+		background-position: -10px 0;
+
+	}
+
+	.widget_recent_entries:before,
+	.widget_recent_comments:before {
+	}
+
+	.widget_text:before {
+	}
+
+	.widget_recent_entries:before {
+		background-position-y: -70px;
+	}
+
+	.widget_recent_comments:before {
+		background-position-y: -147px;
+	}
+
+	.widget_archive:before {
+		background-position-y: -219px;
+	}
+
+
+	aside {
+		margin-bottom: 10px;
+
+		h1 {
+			color: @color-main-bg;
+			margin-top: -65px;
+		}
+	}
+
+}
+
+
+/*
+*/
