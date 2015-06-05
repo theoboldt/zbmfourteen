@@ -30,8 +30,20 @@ footer#colophon {
 		.make-row();
 	}
 	#footer-wrapper aside {
-		.make-xs-column(4);
-		.make-sm-column(3);
+		.make-xs-column(6);
+
+		position: relative;
+		min-height: 1px;
+		padding-left:  (@grid-gutter-width / 2);
+		padding-right: (@grid-gutter-width / 2);
+
+		@media (min-width: 500px) {
+			float: left;
+			width: percentage(4/ @grid-columns);
+	    }
+
+		.make-sm-column(4);
+		.make-md-column(3);
 	}
 
 	#footer-sidebar aside:first-child {

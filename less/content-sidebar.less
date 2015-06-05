@@ -12,44 +12,46 @@
 }
 
 #primary-sidebar {
-	aside:before {
-		margin-left: -10px;
-		min-width: 200px;
-		height: 50px;
-		display: block;
-		content: '';
-		background-image: url('images/strokehole_sidebar.png');
-		background-repeat: no-repeat;
-		background-position: -10px 0;
+	@media (min-width: 600px) {
+		aside:before {
+			margin-left: -10px;
+			min-width: 190px;
+			height: 50px;
+			display: block;
+			content: '';
+			background-image: url('images/strokehole_sidebar.png');
+			background-repeat: no-repeat;
+			background-position: -10px 0;
 
-	}
+		}
 
-	.widget_recent_entries:before,
-	.widget_recent_comments:before {
-	}
+		.widget_recent_entries:before,
+		.widget_recent_comments:before {
+		}
 
-	.widget_text:before {
-	}
+		.widget_text:before {
+		}
 
-	.widget_recent_entries:before {
-		background-position-y: -70px;
-	}
+		.widget_recent_entries:before {
+			background-position-y: -70px;
+		}
 
-	.widget_recent_comments:before {
-		background-position-y: -147px;
-	}
+		.widget_recent_comments:before {
+			background-position-y: -147px;
+		}
 
-	.widget_archive:before {
-		background-position-y: -219px;
-	}
+		.widget_archive:before {
+			background-position-y: -219px;
+		}
 
 
-	aside {
-		margin-bottom: 15px;
+		aside {
+			margin-bottom: 15px;
 
-		h1 {
-			color: @color-main-bg;
-			margin-top: -65px;
+			h1 {
+				color: @color-main-bg;
+				margin-top: -65px;
+			}
 		}
 	}
 
