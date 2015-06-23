@@ -109,33 +109,7 @@
         } );
     } );
 
-    _window.load( function() {
-        // Arrange footer widgets vertically.
-        if ( $.isFunction( $.fn.masonry ) ) {
-            $( '#footer-sidebar' ).masonry( {
-                itemSelector: '.widget',
-                columnWidth: function( containerWidth ) {
-                    return containerWidth / 4;
-                },
-                gutterWidth: 0,
-                isResizable: true,
-                isRTL: $( 'body' ).is( '.rtl' )
-            } );
-        }
-
-        // Initialize Featured Content slider.
-        if ( body.is( '.slider' ) ) {
-            $( '.featured-content' ).featuredslider( {
-                selector: '.featured-content-inner > article',
-                controlsContainer: '.featured-content'
-            } );
-        }
-    } );
-} )( jQuery );
-
-jQuery(document).ready(function() {
-
-	/*	STICKY NAV start */
+		/*	STICKY NAV start */
     var stickyNavTop = jQuery('#primary-navigation').offset().top;
 
     var stickyNav = function(){
@@ -165,5 +139,12 @@ jQuery(document).ready(function() {
 	});
 	/*	COUNTDOWN end */
 
-});
+	body.addClass('ready');
 
+	//prevent floc of strokehole
+	$('<img/>')
+		.load(function() { $('#content').addClass('strokehole-ready') })
+		.attr("src", 'wp-content/themes/zbmfourteen/images/strokehole.png')
+	;
+
+} )( jQuery );
