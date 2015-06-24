@@ -139,15 +139,28 @@
 	});
 	/*	COUNTDOWN end */
 
+
 	//prevent floc of strokehole
 	var strokeHoleImage	= $('#prelaod-strokehole').css('background-image'),
-		strokeHoleEx	= /url\((.*)\)/i,
-		strokeHoleUrl	= strokeHoleEx.exec(strokeHoleImage);
-	if (strokeHoleUrl) {
+		themeUrlEx		= /url\((.*)\/images\/strokehole\.png\)/i,
+		themeUrl		= themeUrlEx.exec(strokeHoleImage)[1];
+
+	if (themeUrl) {
 		$('<img/>')
 			.load(function() { $('#content').addClass('strokehole-ready') })
-			.attr("src", strokeHoleUrl[1])
+			.attr('src', themeUrl+'/images/strokehole.png')
 		;
 	}
+		$('<img/>')
+			.load(function() {
+				var htmlSlidePre = '<div class="item"><img src="'+themeUrl+'/images/slide_',
+					htmlSlidePos = '_full.jpg" alt="" /></div>';
+				for (i = 2; i < 4; i++) {
+					$('#header-carousel .carousel-inner').append(htmlSlidePre+i+htmlSlidePos);
+				}
+			})
+			.attr('src', themeUrl+'/images/slide_1_full.jpg')
+		;
+
 
 } )( jQuery );
