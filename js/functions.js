@@ -139,12 +139,15 @@
 	});
 	/*	COUNTDOWN end */
 
-	body.addClass('ready');
-
 	//prevent floc of strokehole
-	$('<img/>')
-		.load(function() { $('#content').addClass('strokehole-ready') })
-		.attr("src", 'wp-content/themes/zbmfourteen/images/strokehole.png')
-	;
+	var strokeHoleImage	= $('#prelaod-strokehole').css('background-image'),
+		strokeHoleEx	= /url\((.*)\)/i,
+		strokeHoleUrl	= strokeHoleEx.exec(strokeHoleImage);
+	if (strokeHoleUrl) {
+		$('<img/>')
+			.load(function() { $('#content').addClass('strokehole-ready') })
+			.attr("src", strokeHoleUrl[1])
+		;
+	}
 
 } )( jQuery );

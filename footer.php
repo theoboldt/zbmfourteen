@@ -23,6 +23,9 @@
 		</footer><!-- #colophon -->
 	</div><!-- #page -->
 
+	<div id="preload">
+		<div id="prelaod-strokehole"></div>
+	</div>
 	<?php wp_footer(); ?>
 
 </body>
