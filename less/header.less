@@ -312,12 +312,14 @@ header .header-main {
 			ul {
 				top: 0;
 				left: 0;
-				position: absolute;
+				position: fixed;
 				display: block;
 				width: 100%;
+				background-color: lighten(#333, 5%);
 
 				li {
-					float: none;
+					float: left;
+					width: 50%;
 					margin: 0;
 					height: 40px;
 					line-height: 40px;
@@ -326,7 +328,7 @@ header .header-main {
 						display: block;
 						height: 40px;
 						background-color: #333;
-						border-bottom: 1px solid lighten(#333, 5%);
+						border: 1px solid lighten(#333, 5%);
 						text-shadow: none;
 					}
 					a:hover {
