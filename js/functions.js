@@ -130,7 +130,7 @@
 	/*	STICKY NAV end */
 
 	/*	COUNTDOWN start */
-	jQuery("#timer-tostart").countdown("2015/09/16", function(event) {
+	jQuery("#timer-tostart").countdown("2015/08/17", function(event) {
 		var $this = jQuery(this).html(event.strftime(''
 		+ '<span>%D</span> Tage '
 		+ '<span>%H</span> Std '
@@ -161,6 +161,18 @@
 			})
 			.attr('src', themeUrl+'/images/slide_1_full.jpg')
 		;
+
+
+	//lagersong
+	$('#lagersong .btn-play').click(function() {
+  		$('#lagersong-audio').get(0).play();
+	});
+	$('#lagersong .btn-pause').click(function() {
+  		$('#lagersong-audio').get(0).pause();
+	});
+	$('#lagersong .btn-stop').click(function() {
+  		$('#lagersong-audio').get(0).currentTime = 0;
+	});
 
 
 } )( jQuery );
