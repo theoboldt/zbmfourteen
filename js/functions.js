@@ -164,15 +164,18 @@
 
 
 	//lagersong
-	$('#lagersong .btn-play').click(function() {
-  		$('#lagersong-audio').get(0).play();
-	});
-	$('#lagersong .btn-pause').click(function() {
-  		$('#lagersong-audio').get(0).pause();
-	});
-	$('#lagersong .btn-stop').click(function() {
-  		$('#lagersong-audio').get(0).currentTime = 0;
-	});
+	if ($('#lagersong')) {
+		$('#lagersong .btn-play').click(function() {
+			$('#lagersong-audio').get(0).play();
+		});
+		$('#lagersong .btn-pause').click(function() {
+			$('#lagersong-audio').get(0).pause();
+		});
+		$('#lagersong .btn-stop').click(function() {
+			$('#lagersong-audio').get(0).currentTime = 0;
+			$('#lagersong-audio').get(0).pause();
+		});
+	}
 
 
 } )( jQuery );
