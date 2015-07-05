@@ -32,6 +32,12 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
 
+	<?php
+	if (basename(get_page_template()) == 'map.php') {
+		echo '<script src="https://maps.googleapis.com/maps/api/js"></script>';
+	}
+	?>
+
     <?php wp_head(); ?>
 </head>
 
