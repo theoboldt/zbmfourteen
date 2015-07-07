@@ -139,11 +139,17 @@
 	});
 	/*	COUNTDOWN end */
 
-
 	//prevent floc of strokehole
-	var strokeHoleImage	= $('#prelaod-strokehole').css('background-image'),
-		themeUrlEx		= /url\((.*)\/images\/strokehole\.png\)/i,
-		themeUrl		= themeUrlEx.exec(strokeHoleImage)[1];
+	var themeUrl;
+	try {
+		var strokeHoleImage	= $('#prelaod-strokehole').css('background-image'),
+			themeUrlEx		= /url\(["']{0,1}(.*)\/images\/strokehole\.png["']{0,1}\)/i;
+
+		themeUrl	= themeUrlEx.exec(strokeHoleImage)[1];
+	} catch (e) {
+		console.log(e);
+		themeUrl	= 'http://www.zimmerbergmuehle.de/a2/wp-content/themes/zbmfourteen';
+	}
 
 	if (themeUrl) {
 		$('<img/>')
