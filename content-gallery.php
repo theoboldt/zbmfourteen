@@ -37,7 +37,7 @@
 			<?php zbmfourteen_posted_on(); ?>
 
 			<?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
-			<span class="comments-link"><span class="glyphicon glyphicon-comment"></span> <?php comments_popup_link( __( 'Leave a comment', 'twentyfourteen' ), __( '1 Comment', 'twentyfourteen' ), __( '% Comments', 'twentyfourteen' ) ); ?></span>
+			<span class="comments-link"><span class="glyphicon glyphicon-comment"></span> <?php comments_popup_link( 'Kommentar abgeben', __( '1 Comment', 'twentyfourteen' ), __( '% Comments', 'twentyfourteen' ) ); ?></span>
 			<?php endif; ?>
 
 			<?php edit_post_link( __( 'Edit', 'twentyfourteen' ), '<span class="edit-link">', '</span>' ); ?>

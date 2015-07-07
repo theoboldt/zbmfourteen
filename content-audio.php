@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying posts in the Image post format
+ * The template for displaying posts in the Audio post format
  *
  * @package WordPress
  * @subpackage Twenty_Fourteen
@@ -28,8 +28,8 @@
 
 		<div class="entry-meta">
 			<span class="post-format">
-				<span class="glyphicon glyphicon-picture"></span>
-				<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'image' ) ); ?>"><?php echo get_post_format_string( 'image' ); ?></a>
+				<span class="glyphicon glyphicon-music"></span>
+				<a class="entry-format" href="<?php echo esc_url( get_post_format_link( 'audio' ) ); ?>"><?php echo get_post_format_string( 'audio' ); ?></a>
 			</span>
 
 			<?php zbmfourteen_posted_on(); ?>
