@@ -128,7 +128,14 @@ article {
 	}
 
 	.subblockquote {
-		margin-left: 45px;
+		margin-left: 10px;
+		@media (min-width: @screen-sm-min) {
+		    margin-left: 25px;
+	    }
+		@media (min-width: @screen-md-min) {
+		    margin-left: 45px;
+	    }
+
 	}
 
 }
