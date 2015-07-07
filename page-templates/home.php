@@ -27,8 +27,10 @@ get_header(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header class="entry-header">
-					<h1 class="entry-title">Herzlich Willkommen</h1>
-					<h2>in der ZBM Abschnitt 2!</h2>
+					<div class="entry-title-box">
+						<h1 class="entry-title">Herzlich Willkommen</h1>
+						<h2>in der ZBM Abschnitt 2!</h2>
+					</div>
 				</header><!-- .entry-header -->
 			<?php 	the_content(); ?>
 			</article><!-- #post-## -->

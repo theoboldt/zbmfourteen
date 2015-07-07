@@ -7,13 +7,11 @@
 	background-image: url('images/strokehole.png');
 }
 
-.page #content .entry-header,
-.category #content .archive-header,
-.archive #content .archive-header {
+#content .entry-title-box {
 	background-image: url('images/strokehole.png');
 	background-repeat: no-repeat;
 	background-position: -5px;
-	margin: 0 0 0 -40px;
+	margin: 0 0 0 -30px;
 	height: 98px;
 	max-width: 600px;
 
@@ -21,52 +19,51 @@
 		font-size: 35px;
 		color: #1f1f1f;
 		padding-top: 21px;
-		margin: 0 0 0 40px;
+		margin: 0 0 0 30px;
 	}
 }
 
-#primary.home #content .entry-header {
+//home page
+#primary.home #content .entry-title-box {
 	margin-bottom: 20px;
 
 	h2 {
 		color: darken(@color-ac-0, 32%);
 		padding: 0;
-		margin-top: 1px;
+		margin-top: -5px;
 		margin-left: 125px;
 	}
 }
-#content.strokehole-ready article.post header.entry-header {
-	background: @color-main-bg;
+
+#content.strokehole-ready .entry-title-box h1 {
+	color: @color-main-bg;
 }
 
-.single #content.strokehole-ready .entry-header h1 {
-	color: #333;
-}
-
-#content.strokehole-ready .entry-header,
-#content.strokehole-ready .archive-header,
-#content.strokehole-ready .archive-header {
-	background-color: #333;
+#content.strokehole-ready .entry-title-box {
+	background-color: darken(@color-main-bg, 15%);
 	h1 {
-		color: @color-main-bg;
+		color: lighten(#333, 0%);
 	}
 }
 
-#primary.home #content.strokehole-ready .entry-header {
+#primary.home #content.strokehole-ready .entry-title-box h1,
+.site-highlights #content.strokehole-ready .entry-title-box h1,
+.site-umgebung #content.strokehole-ready .entry-title-box h1 {
+	color: @color-main-bg;
+}
+
+#primary.home #content.strokehole-ready .entry-title-box {
 	background-color: @color-ac-0;
 }
 
-.site-highlights #content.strokehole-ready .archive-header {
+.site-highlights #content.strokehole-ready .entry-title-box {
 	background-color: @color-ac-1;
 }
 
-.site-umgebung #content.strokehole-ready .archive-header {
+.site-umgebung #content.strokehole-ready .entry-title-box {
 	background-color: @color-ac-2;
 }
 
-.site-tagesberichte #content.strokehole-ready .archive-header {
+.site-tagesberichte #content.strokehole-ready .entry-title-box {
 	background-color: @color-ac-3-dark;
-	h1 {
-		color: #333;
-	}
 }

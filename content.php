@@ -16,7 +16,9 @@
 	<header class="entry-header">
 		<?php
 			if ( is_single() ) :
+				echo '<div class="entry-title-box">';
 				the_title( '<h1 class="entry-title">', '</h1>' );
+				echo '</div>';
 			else :
 				the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
 			endif;

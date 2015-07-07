@@ -17,22 +17,25 @@ get_header(); ?>
 		get_template_part( 'featured-content' );
 	}
 ?>
-<?php
-	if ( is_front_page() && twentyfourteen_has_featured_posts() ) {
-		// Include the featured content template.
-		get_template_part( 'featured-content' );
-	}
-?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area home">
 		<div id="content" class="site-content" role="main">
 			<?php
 				// Start the Loop.
 				while ( have_posts() ) : the_post();
+			?>
 
-					// Include the page content template.
-					get_template_part( 'content', 'page' );
-
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<header class="entry-header">
+					<?php
+						echo '<div class="entry-title-box">';
+						the_title( '<h1 class="entry-title">', '</h1>' );
+						echo '</div>';
+					?>
+				</header><!-- .entry-header -->
+			<?php 	the_content(); ?>
+			</article><!-- #post-## -->
+			<?php
 					// If comments are open or we have at least one comment, load up the comment template.
 					if ( comments_open() || get_comments_number() ) {
 						comments_template();
