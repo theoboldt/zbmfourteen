@@ -26,8 +26,8 @@ get_header();
                         <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
                         <div class="entry-meta">
-
-                            <span class="entry-date"><time class="entry-date updated" datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"><?php echo esc_html( get_the_date() ); ?></time></span>
+                            <span class="entry-date"><time class="entry-date published" datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"><?php echo esc_html( get_the_date() ); ?></time></span>
+							<span class="entry-date-updated"><time class="entry-date-updated updated" datetime="<?php echo esc_attr(get_the_modified_date( 'c' )); ?>"><?php echo esc_html( esc_html(get_the_modified_date()) ); ?></time></span>
 
                             <span class="full-size-link"><a href="<?php echo esc_url( wp_get_attachment_url() ); ?>"><?php echo $metadata['width']; ?> &times; <?php echo $metadata['height']; ?></a></span>
 
