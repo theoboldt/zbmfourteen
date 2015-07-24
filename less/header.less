@@ -104,7 +104,11 @@ header .container-fluid {
 
 
 #site-title-description, header .header-main {
-	margin-left: 190px;
+	margin-left: 175px;
+
+	@media (min-width: 992px) {
+		margin-left: 190px;
+	}
 }
 
 
@@ -354,7 +358,10 @@ header .header-main {
 			li {
 				list-style-type: none;
 				float: left;
-				margin-right: 15px;
+				@media (min-width: 992px) {
+					margin-right: 15px;
+				}
+				margin-right: 7px;
 				font-size: 20px;
 
 				height: 30px;

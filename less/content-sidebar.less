@@ -13,6 +13,8 @@
 }
 
 #primary-sidebar {
+	@background-position-x: -10px;
+
 	@media (min-width: 600px) {
 		aside:before {
 			margin-left: -10px;
@@ -22,7 +24,7 @@
 			content: '';
 			background-image: url('images/strokehole_sidebar.png');
 			background-repeat: no-repeat;
-			background-position: -10px 0;
+			background-position: @background-position-x 0;
 
 		}
 
@@ -34,15 +36,18 @@
 		}
 
 		.widget_recent_entries:before {
-			background-position-y: -70px;
+			background-position: @background-position-x -70px;
 		}
 
 		.widget_recent_comments:before {
-			background-position-y: -147px;
+			background-position: @background-position-x -147px;
 		}
 
 		.widget_archive:before {
-			background-position-y: -219px;
+			background-position: @background-position-x -219px;
+		}
+		.widget_zbm_countdown:before {
+			background-position: @background-position-x -285px;
 		}
 
 		#lagersong {
