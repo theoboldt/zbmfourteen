@@ -117,3 +117,14 @@ function my_login_stylesheet() {
     wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/style-login.css' );
 }
 add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
+
+/**
+ * Register the impressum widget
+ *
+ */
+function zbmfourteen_widgets_init() {
+	require get_stylesheet_directory() . '/inc/widgets.php';
+	register_widget( 'Zbmfourteen_Impressum_Widget' );
+
+}
+add_action( 'widgets_init', 'zbmfourteen_widgets_init' );
