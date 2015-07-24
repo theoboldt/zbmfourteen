@@ -124,7 +124,5 @@ add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
  */
 function zbmfourteen_widgets_init() {
 	require get_stylesheet_directory() . '/inc/widgets.php';
-	register_widget( 'Zbmfourteen_Impressum_Widget' );
-
 }
 add_action( 'widgets_init', 'zbmfourteen_widgets_init' );
