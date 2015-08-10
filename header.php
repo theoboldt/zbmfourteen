@@ -32,6 +32,7 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_stylesheet_directory_uri(); ?>/images/logo_touch_icon_72x.png" />
 	<link rel="apple-touch-icon" sizes="114x114" href="<?php echo get_stylesheet_directory_uri(); ?>/images/logo_touch_icon_114x.png" />
 	<link rel="apple-touch-icon" sizes="144x144" href="<?php echo get_stylesheet_directory_uri(); ?>/images/logo_touch_icon_144x.png" />
+	<link rel="alternate" hreflang="de" href="<?php echo get_permalink(); ?>">
 
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
