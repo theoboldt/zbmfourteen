@@ -45,13 +45,13 @@ function zbmfourteen_scripts() {
 
 	// Load our main stylesheet.
 	wp_enqueue_style( 'zbmfourteen-font', 'http://fonts.googleapis.com/css?family=Boogaloo' );
-//	if (WP_DEBUG) {
+	wp_dequeue_script('twentyfourteen-style');
+
+	if (WP_DEBUG) {
 		wp_enqueue_style( 'zbmfourteen-style', get_stylesheet_uri(), array('zbmfourteen-font') );
-	/*
 	} else {
-		wp_enqueue_style( 'zbmfourteen-style', get_stylesheet_directory_uri().'/style.min.css', array('zbmfourteen-font') );
+		wp_enqueue_style( 'zbmfourteen-style', get_stylesheet_directory_uri().'/style.php', array('zbmfourteen-font') );
 	}
-	*/
 
 	if (WP_DEBUG) {
 		wp_enqueue_script( 'zbmfourteen-countdown', get_stylesheet_directory_uri() . '/js/jquery.countdown.min.js', array( 'jquery' ), $version, true );
@@ -66,10 +66,12 @@ function zbmfourteen_scripts() {
 		wp_enqueue_script( 'zbmfourteen-gallery-tiled', get_stylesheet_directory_uri() . '/js/tiled-gallery/tiled-gallery.js', array( 'jquery' ), $version, true );
 */
 	} else {
-		wp_enqueue_script( 'zbmfourteen-all', get_stylesheet_directory_uri() . '/script.min.js', array( 'jquery' ), $version, true );
+		wp_enqueue_script( 'zbmfourteen-all', get_stylesheet_directory_uri() . '/script.php', array( 'jquery' ), $version, true );
 	}
+
+	remove_action( 'wp_enqueue_scripts', 'twentyfourteen_scripts' );
 }
-add_action( 'wp_enqueue_scripts', 'zbmfourteen_scripts', 100 );
+add_action( 'wp_enqueue_scripts', 'zbmfourteen_scripts', 1 );
 
 
 /**
