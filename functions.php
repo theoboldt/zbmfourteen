@@ -22,7 +22,7 @@ function filter_media_comment_status( $open, $post_id ) {
  * @since Twenty Fourteen 1.0
  */
 function zbmfourteen_scripts() {
-	$version	= '20150601';
+	$version	= '20150603';
 
 	//dequeue unused files
 	wp_dequeue_style('twentyfourteen-lato');
@@ -50,7 +50,7 @@ function zbmfourteen_scripts() {
 	if (WP_DEBUG) {
 		wp_enqueue_style( 'zbmfourteen-style', get_stylesheet_uri(), array('zbmfourteen-font') );
 	} else {
-		wp_enqueue_style( 'zbmfourteen-style', get_stylesheet_directory_uri().'/style.php', array('zbmfourteen-font'), filemtime('style.min.css') );
+		wp_enqueue_style( 'zbmfourteen-style', get_stylesheet_directory_uri().'/style.php', array('zbmfourteen-font'), filemtime(dirname(__FILE__).'/style.min.css') );
 	}
 
 	if (WP_DEBUG) {
@@ -66,7 +66,7 @@ function zbmfourteen_scripts() {
 		wp_enqueue_script( 'zbmfourteen-gallery-tiled', get_stylesheet_directory_uri() . '/js/tiled-gallery/tiled-gallery.js', array( 'jquery' ), $version, true );
 */
 	} else {
-		wp_enqueue_script( 'zbmfourteen-all', get_stylesheet_directory_uri() . '/script.php', array( 'jquery' ), filemtime('script.min.js'), true );
+		wp_enqueue_script( 'zbmfourteen-all', get_stylesheet_directory_uri() . '/script.php', array( 'jquery' ), filemtime(dirname(__FILE__).'/script.min.js'), true );
 	}
 
 	remove_action( 'wp_enqueue_scripts', 'twentyfourteen_scripts' );
