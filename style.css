@@ -5670,25 +5670,10 @@ body .page, body #page  {
 .category #content article.post h1 {
   font-size: 22px;
 }
-.cards {
-  list-style-type: none;
-  margin: 0;
-  width: auto;
-  background-color: red;
-}
-.cards img {
-  width: 100%;
-}
-.cards .card-l {
-  background-color: blue;
-  height: 49%;
-  width: 49%;
-  float: left;
-}
-.cards .card-r {
-  background-color: green;
-  width: 49%;
-  float: right;
+#primary.home .entry-date,
+#primary.home .entry-date-updated,
+#primary.home .author.vcard {
+  display: none;
 }
 /* main */
 #main {
