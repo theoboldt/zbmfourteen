@@ -31,6 +31,24 @@ get_header(); ?>
 						<h1 class="entry-title">Herzlich Willkommen</h1>
 						<h2>in der ZBM Abschnitt 2!</h2>
 					</div>
+					<?php
+					printf( '<span class="entry-date">
+						 <time class="entry-date published" datetime="%1$s">%2$s</time>
+					</span>
+					<span class="entry-date-updated">
+						<time class="updated" datetime="%4$s">%5$s</time>
+					</span>
+					<span class="author vcard">
+						<span class="url fn" rel="author">%3$s</span>
+					</span>
+					',
+						esc_attr( get_the_date( 'c' ) ),
+						esc_html( get_the_date() ),
+						get_the_author(),
+						esc_attr(get_the_modified_date( 'c' )),
+						esc_html(get_the_modified_date())
+					);
+					?>
 				</header><!-- .entry-header -->
 			<?php 	the_content(); ?>
 			</article><!-- #post-## -->
