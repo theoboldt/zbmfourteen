@@ -1,4 +1,4 @@
 style.less
-less/bootstrap/*.css
+less/*.css
 .idea/*
 bootstrap/*
