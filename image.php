@@ -26,12 +26,25 @@ get_header();
                         <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
                         <div class="entry-meta">
-                            <span class="entry-date"><time class="entry-date published" datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"><?php echo esc_html( get_the_date() ); ?></time></span>
-							<span class="entry-date-updated"><time class="entry-date-updated updated" datetime="<?php echo esc_attr(get_the_modified_date( 'c' )); ?>"><?php echo esc_html( esc_html(get_the_modified_date()) ); ?></time></span>
+			<span class="post-format">
+				<span class="glyphicon glyphicon-picture"></span>
+                Bild
+			</span>
+<?php
+	echo '<span class="entry-date"><span class="glyphicon glyphicon-calendar"></span>';
+		printf( ' <a href="%1$s" rel="bookmark"><time class="entry-date published" datetime="%2$s">%3$s</time></a></span> <span class="entry-date-updated"><time class="updated" datetime="%6$s">%7$s</time></span> <span class="byline"><span class="glyphicon glyphicon-user"></span> <span class="author vcard"><a class="url fn" href="%4$s" rel="author">%5$s</a></span>',
+		esc_url( get_permalink() ),
+		esc_attr( get_the_date( 'c' ) ),
+		esc_html( get_the_date() ),
+		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+		get_the_author(),
+		esc_attr(get_the_modified_date( 'c' )),
+		esc_html(get_the_modified_date())
+	);
+	echo '</span>';
+?>
+                            <span class="full-size-link"><a href="<?php echo esc_url( wp_get_attachment_url() ); ?>"><span class="glyphicon glyphicon-fullscreen"></span> <?php echo $metadata['width']; ?> &times; <?php echo $metadata['height']; ?></a></span>
 
-                            <span class="full-size-link"><a href="<?php echo esc_url( wp_get_attachment_url() ); ?>"><?php echo $metadata['width']; ?> &times; <?php echo $metadata['height']; ?></a></span>
-
-                            <span class="parent-post-link"><a href="<?php echo esc_url( get_permalink( $post->post_parent ) ); ?>" rel="gallery"><?php echo get_the_title( $post->post_parent ); ?></a></span>
                             <?php edit_post_link( __( 'Edit', 'twentyfourteen' ), '<span class="edit-link">', '</span>' ); ?>
                         </div><!-- .entry-meta -->
                     </header><!-- .entry-header -->
@@ -61,11 +74,11 @@ get_header();
                     </div><!-- .entry-content -->
                 </article><!-- #post-## -->
 
-                <nav id="image-navigation" class="navigation image-navigation">
+                <nav id="image-navigation" class="navigation post-navigation" role="navigation">
+                    <h1 class="screen-reader-text">Beitragsnavigation</h1>
                     <div class="nav-links">
-                    <?php previous_image_link( false, '<div class="previous-image">&laquo; ' . __( 'Previous Image', 'twentyfourteen' ) . '</div>' ); ?>
-                    <?php next_image_link( false, '<div class="next-image">' . __( 'Next Image', 'twentyfourteen' ) . ' &raquo;</div>' ); ?>
-                        <div class="clear"></div>
+                    <?php previous_image_link( false, '<div class="prev"><span class="glyphicon glyphicon-chevron-left"></span> ' . __( 'Previous Image', 'twentyfourteen' ) . '</div>' ); ?>
+                    <?php next_image_link( false, '<div class="next">' . __( 'Next Image', 'twentyfourteen' ) . ' <span class="glyphicon glyphicon-chevron-right"></span></div>' ); ?>
                     </div><!-- .nav-links -->
                 </nav><!-- #image-navigation -->
             </div>
