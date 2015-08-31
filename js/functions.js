@@ -130,7 +130,7 @@
 	/*	STICKY NAV end */
 
 	/*	COUNTDOWN start */
-	jQuery("#timer-tostart").countdown("2015/08/17", function(event) {
+	jQuery("#timer-tostart").countdown("2016/08/15 2:30 PM", function(event) {
 		var $this = jQuery(this).html(event.strftime(''
 		+ '<span>%D</span> Tage '
 		+ '<span>%H</span> Std '
