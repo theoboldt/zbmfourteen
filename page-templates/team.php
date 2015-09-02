@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Karte
+ * Template Name: Team
  *
  * @package WordPress
  * @subpackage ZBM_Fourteen
@@ -18,7 +18,7 @@ get_header(); ?>
 	}
 ?>
 
-	<div id="primary" class="content-area home">
+	<div id="primary" class="content-area team">
 		<div id="content" class="site-content" role="main">
 			<?php
 				// Start the Loop.
@@ -65,19 +65,3 @@ get_header(); ?>
 <?php
 get_sidebar();
 get_footer();
-
-?>
-<script>
-( function( $ ) {
-	var mapCanvas = document.getElementById('map');
-	var mapOptions = {
-	  center: new google.maps.LatLng(48.954495, 9.966504),
-	  zoom: 18,
-	  mapTypeId: google.maps.MapTypeId.HYBRID
-	}
-
-	var map = new google.maps.Map(mapCanvas, mapOptions)
-
-} )( jQuery );
-
-</script>

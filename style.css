@@ -5404,6 +5404,12 @@ header .header-main .menu-item-no-3 a {
 header .header-main .menu-item-no-3 a:hover {
   color: #ffffff;
 }
+header .header-main .menu-item-no-4 a:hover {
+  color: #f891d2;
+}
+header .header-main .menu-item-no-4 a {
+  color: #f561bf;
+}
 @media (max-width: 700px) {
   header .header-main #primary-navigation .menu-toggle {
     z-index: 100;
@@ -5651,7 +5657,8 @@ body .page, body #page  {
 }
 #primary.home #content.strokehole-ready .entry-title-box h1,
 .site-highlights #content.strokehole-ready .entry-title-box h1,
-.site-umgebung #content.strokehole-ready .entry-title-box h1 {
+.site-umgebung #content.strokehole-ready .entry-title-box h1,
+#primary.team #content.strokehole-ready .entry-title-box h1 {
   color: #ede4d7;
 }
 #primary.home #content.strokehole-ready .entry-title-box {
@@ -5666,13 +5673,19 @@ body .page, body #page  {
 .site-tagesberichte #content.strokehole-ready .entry-title-box {
   background-color: #ffbf4b;
 }
+#primary.team #content.strokehole-ready .entry-title-box {
+  background-color: #9a0a65;
+}
 .archive #content article.post h1,
 .category #content article.post h1 {
   font-size: 22px;
 }
 #primary.home .entry-date,
+#primary.team .entry-date,
 #primary.home .entry-date-updated,
-#primary.home .author.vcard {
+#primary.team .entry-date-updated,
+#primary.home .author.vcard,
+#primary.team .author.vcard {
   display: none;
 }
 /* main */
