@@ -5405,10 +5405,10 @@ header .header-main .menu-item-no-3 a:hover {
   color: #ffffff;
 }
 header .header-main .menu-item-no-4 a:hover {
-  color: #f891d2;
+  color: #f3bbd7;
 }
 header .header-main .menu-item-no-4 a {
-  color: #f561bf;
+  color: #eb90bd;
 }
 @media (max-width: 700px) {
   header .header-main #primary-navigation .menu-toggle {
@@ -5674,7 +5674,7 @@ body .page, body #page  {
   background-color: #ffbf4b;
 }
 #primary.team #content.strokehole-ready .entry-title-box {
-  background-color: #9a0a65;
+  background-color: #aa1e63;
 }
 .archive #content article.post h1,
 .category #content article.post h1 {
