@@ -140,15 +140,18 @@
 	/*	COUNTDOWN end */
 
 	//prevent floc of strokehole
-	var themeUrl;
+	var themeUrl,
+        themeUrlDefault = 'http://www.zimmerbergmuehle.de/a2/wp-content/themes/zbmfourteen';
 	try {
 		var strokeHoleImage	= $('#prelaod-strokehole').css('background-image'),
-			themeUrlEx		= /url\(["']{0,1}(.*)\/images\/strokehole\.png["']{0,1}\)/i;
+			themeUrlEx		= /url\(["']{0,1}(.*)\/images\/strokehole\.png["']{0,1}\)/i,
+            regexResult = themeUrlEx.exec(strokeHoleImage);
 
-		themeUrl	= themeUrlEx.exec(strokeHoleImage)[1];
+
+		themeUrl	= regexResult ? regexResult[1] : themeUrlDefault;
 	} catch (e) {
 		console.log(e);
-		themeUrl	= 'http://www.zimmerbergmuehle.de/a2/wp-content/themes/zbmfourteen';
+		themeUrl	= themeUrlDefault;
 	}
 
 	if (themeUrl) {
@@ -183,5 +186,8 @@
 		});
 	}
 
-
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
 } )( jQuery );
