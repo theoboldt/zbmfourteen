@@ -2,6 +2,7 @@
 
 // Custom template tags for this theme.
 require get_stylesheet_directory() . '/inc/template-tags.php';
+require get_stylesheet_directory() . '/inc/bootstrap_gallery.php';
 
 if ( ! isset( $content_width ) ) {
 	$content_width = 850;
