@@ -5068,7 +5068,7 @@ fieldset[disabled] #content form.comment-form p.form-submit input.focus {
   width: auto;
   padding: 10px 10px 15px;
   text-align: center;
-  font-family: "Marker Felt", sans-serif;
+  font-family: "Marker Felt", boogaloo, sans-serif;
   text-decoration: none;
   color: #333;
   font-size: 18px;
