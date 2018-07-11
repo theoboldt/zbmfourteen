@@ -45,7 +45,7 @@ function zbmfourteen_scripts() {
 	wp_dequeue_script('twentyfourteen-script');
 
 	// Load our main stylesheet.
-	wp_enqueue_style( 'zbmfourteen-font', 'https://fonts.googleapis.com/css?family=Boogaloo' );
+	wp_enqueue_style( 'zbmfourteen-font', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . '://fonts.googleapis.com/css?family=Boogaloo' );
 	wp_dequeue_script('twentyfourteen-style');
 
 	if (WP_DEBUG) {

@@ -37,7 +37,7 @@
      * Makes "skip to content" link work correctly in IE9 and Chrome for better
      * accessibility.
      *
-     * @link http://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/
+     * @link https://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/
      */
     _window.on( 'hashchange.twentyfourteen', function() {
         var hash = location.hash.substring( 1 ), element;
@@ -141,7 +141,7 @@
 
 	//prevent floc of strokehole
 	var themeUrl,
-        themeUrlDefault = 'http://www.zimmerbergmuehle.de/a2/wp-content/themes/zbmfourteen';
+        themeUrlDefault = 'https://www.zimmerbergmuehle.de/a2/wp-content/themes/zbmfourteen';
 	try {
 		var strokeHoleImage	= $('#prelaod-strokehole').css('background-image'),
 			themeUrlEx		= /url\(["']{0,1}(.*)\/images\/strokehole\.png["']{0,1}\)/i,

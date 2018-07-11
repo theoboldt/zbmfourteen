@@ -18,7 +18,7 @@ class Zbmfourteen_Impressum_Widget extends WP_Widget {
 	// Creating widget front-end
 	// This is where the action happens
 	public function widget( $args, $instance ) {
-		$title	= '<a href="http://www.zimmerbergmuehle.de/a2/impressum/">Impressum</a>';
+		$title	= '<a href="https://www.zimmerbergmuehle.de/a2/impressum/">Impressum</a>';
 
 		// before and after widget arguments are defined by themes
 		echo $args['before_widget'];
@@ -28,7 +28,7 @@ class Zbmfourteen_Impressum_Widget extends WP_Widget {
 		// This is where you run the code and display the output
 		?>
 		<div class="vcard">
-			<a class="fn org url" href="http://www.kjr-ostalb.de/">Kreisjugendring Ostalb e.V.</a><br>
+			<a class="fn org url" href="https://www.kjr-ostalb.de/">Kreisjugendring Ostalb e.V.</a><br>
 			<p class="adr"><span class="street-address">Stuttgarter Str. 41</span><br>
 				<span class="postal-code">94301</span> <span class="locality">Aalen</span>
 				<span class="country-name">Germany</span>

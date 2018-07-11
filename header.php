@@ -24,7 +24,7 @@
 	<meta name="google-site-verification" content="NnGqZJVIqfE9DOZcFHXxB2FqRM-8YPf6gUqg8WMUWGk" />
 	<meta http-equiv="Cache-control" content="public">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
-	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.png" type="image/png" />
     <link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.png" type="image/png" />
