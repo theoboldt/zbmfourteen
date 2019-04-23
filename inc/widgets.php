@@ -30,7 +30,7 @@ class Zbmfourteen_Impressum_Widget extends WP_Widget {
 		<div class="vcard">
 			<a class="fn org url" href="https://www.kjr-ostalb.de/">Kreisjugendring Ostalb e.V.</a><br>
 			<p class="adr"><span class="street-address">Stuttgarter Str. 41</span><br>
-				<span class="postal-code">94301</span> <span class="locality">Aalen</span>
+				<span class="postal-code">73430</span> <span class="locality">Aalen</span>
 				<span class="country-name">Germany</span>
 			</p>
 			<div>
