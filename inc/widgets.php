@@ -91,25 +91,29 @@ class Zbmfourteen_Timer_Widget extends WP_Widget {
 
 		echo $args['before_title'] .'Lagerbeginn'. $args['after_title'];
 
+        $targetDate = ! empty( $instance['target_date'] ) ? $instance['target_date'] : '';
+
 		// This is where you run the code and display the output
-		echo '<div id="timer-tostart"></div>';
+		echo '<div id="timer-tostart" data-target-time="'.$targetDate.'"></div>';
 		echo $args['after_widget'];
 	}
 
 	// Widget Backend
 	public function form( $instance ) {
 		// Widget admin form
-		?>
-		<p>
-		<i>Keine Konfiguration notwendig.</i>
-		</p>
-		<?php
+        $targetDate = ! empty( $instance['target_date'] ) ? $instance['target_date'] : ''; ?>
+  <p>
+    <label for="<?php echo $this->get_field_id( 'target_date' ); ?>">End-Zeitpunkt:</label>
+    <input type="text" id="<?php echo $this->get_field_id( 'target_date' ); ?>" name="<?php echo $this->get_field_name( 'target_date' ); ?>" value="<?php echo esc_attr( $targetDate ); ?>" />
+        Der End-Zeitpunkt muss im Format <code>YYYY/MM/DD HH:MM [AM|PM]</code>, bspw. <code>2019/08/11 2:15 PM</code> angegeben werden.
+  </p><?php
 	}
 
 	// Updating widget replacing old instances with new
 	public function update( $new_instance, $old_instance ) {
-		$instance = array();
-		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+        $instance                = $old_instance;
+        $instance['target_date'] = htmlentities($new_instance['target_date']);
+        $instance['title']       = (!empty($new_instance['title'])) ? strip_tags($new_instance['title']) : '';
 		return $instance;
 	}
 } // Class wpb_widget ends here
